@@ -1,4 +1,4 @@
-"""L2 -> L3 SysML generation boundary."""
+"""L2 KnowledgeState -> L3 SysML compatibility generation."""
 
 from .base import KnowledgeStateToSysMLGenerator, SysMLGenerator
 

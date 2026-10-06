@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "entities": [
+    {
+      "id": "wind",
+      "name": "Wind",
+      "entity_type": "renewable_source",
+      "description": null
+    },
+    {
+      "id": "pv",
+      "name": "PV",
+      "entity_type": "renewable_source",
+      "description": null
+    },
+    {
+      "id": "battery",
+      "name": "Battery",
+      "entity_type": "storage",
+      "description": null
+    },
+    {
+      "id": "grid",
+      "name": "Grid",
+      "entity_type": "grid_connection",
+      "description": null
+    },
+    {
+      "id": "load",
+      "name": "Load",
+      "entity_type": "demand",
+      "description": null
+    }
+  ],
+  "attributes": [
+    {
+      "id": "wind_rated_power",
+      "entity_id": "wind",
+      "name": "rated_power",
+      "value": 100,
+      "unit": "kW",
+      "description": null
+    },
+    {
+      "id": "pv_rated_power",
+      "entity_id": "pv",
+      "name": "rated_power",
+      "value": 80,
+      "unit": "kW",
+      "description": null
+    },
+    {
+      "id": "battery_capacity",
+      "entity_id": "battery",
+      "name": "capacity",
+      "value": 200,
+      "unit": "kWh",
+      "description": null
+    },
+    {
+      "id": "battery_max_charge_power",
+      "entity_id": "battery",
+      "name": "max_charge_power",
+      "value": 50,
+      "unit": "kW",
+      "description": null
+    },
+    {
+      "id": "battery_max_discharge_power",
+      "entity_id": "battery",
+      "name": "max_discharge_power",
+      "value": 50,
+      "unit": "kW",
+      "description": null
+    },
+    {
+      "id": "battery_soc_min",
+      "entity_id": "battery",
+      "name": "SOC_min",
+      "value": 20,
+      "unit": "%",
+      "description": null
+    },
+    {
+      "id": "battery_soc_max",
+      "entity_id": "battery",
+      "name": "SOC_max",
+      "value": 90,
+      "unit": "%",
+      "description": null
+    },
+    {
+      "id": "grid_max_import_power",
+      "entity_id": "grid",
+      "name": "max_import_power",
+      "value": 150,
+      "unit": "kW",
+      "description": null
+    },
+    {
+      "id": "load_demand",
+      "entity_id": "load",
+      "name": "demand",
+      "value": 120,
+      "unit": "kW",
+      "description": null
+    }
+  ],
+  "states": [
+    {
+      "id": "battery_soc",
+      "entity_id": "battery",
+      "name": "SOC",
+      "value": 50,
+      "unit": "%",
+      "description": null
+    }
+  ],
+  "relations": [
+    {
+      "id": "wind_to_load",
+      "relation_type": "supplies",
+      "source_entity_id": "wind",
+      "target_entity_id": "load",
+      "description": null
+    },
+    {
+      "id": "pv_to_load",
+      "relation_type": "supplies",
+      "source_entity_id": "pv",
+      "target_entity_id": "load",
+      "description": null
+    },
+    {
+      "id": "battery_to_load",
+      "relation_type": "supplies",
+      "source_entity_id": "battery",
+      "target_entity_id": "load",
+      "description": null
+    },
+    {
+      "id": "grid_to_load",
+      "relation_type": "supplies",
+      "source_entity_id": "grid",
+      "target_entity_id": "load",
+      "description": null
+    }
+  ],
+  "processes": [
+    {
+      "id": "generation",
+      "name": "generation",
+      "description": null,
+      "inputs": [
+        "wind",
+        "pv"
+      ],
+      "outputs": [
+        "load"
+      ]
+    },
+    {
+      "id": "charging",
+      "name": "charging",
+      "description": null,
+      "inputs": [
+        "grid"
+      ],
+      "outputs": [
+        "battery"
+      ]
+    },
+    {
+      "id": "discharging",
+      "name": "discharging",
+      "description": null,
+      "inputs": [
+        "battery"
+      ],
+      "outputs": [
+        "load"
+      ]
+    },
+    {
+      "id": "grid_purchase",
+      "name": "grid_purchase",
+      "description": null,
+      "inputs": [
+        "grid"
+      ],
+      "outputs": [
+        "load"
+      ]
+    },
+    {
+      "id": "load_consumption",
+      "name": "load_consumption",
+      "description": null,
+      "inputs": [
+        "load"
+      ],
+      "outputs": []
+    }
+  ],
+  "constraints": [
+    {
+      "id": "soc_limits",
+      "name": "SOC limits",
+      "expression": "SOC_min <= SOC <= SOC_max",
+      "description": null,
+      "variables": [
+        "battery_soc_min",
+        "battery_soc",
+        "battery_soc_max"
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "minimize_operating_cost",
+      "name": "operating_cost",
+      "expression": "minimize operating_cost",
+      "description": null,
+      "direction": "minimize"
+    }
+  ]
+}

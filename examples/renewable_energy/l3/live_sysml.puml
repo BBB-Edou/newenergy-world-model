@@ -1,0 +1,88 @@
+@startuml requirements
+title L3 Requirements
+rectangle "SOC limits" as req_requirement_constraint_soc_limits
+note right of req_requirement_constraint_soc_limits : SOC_min <= SOC <= SOC_max\ntype=constraint
+rectangle "operating_cost" as req_requirement_objective_minimize_operating_cost
+note right of req_requirement_objective_minimize_operating_cost : minimize operating_cost\ntype=objective
+@enduml
+
+@startuml bdd
+title L3 BDD
+class "Wind" as block_block_wind {
+  block_type = renewable_source
+  rated_power : 100 kW
+}
+class "PV" as block_block_pv {
+  block_type = renewable_source
+  rated_power : 80 kW
+}
+class "Battery" as block_block_battery {
+  block_type = storage
+  capacity : 200 kWh
+  max_charge_power : 50 kW
+  max_discharge_power : 50 kW
+  SOC_min : 20 %
+  SOC_max : 90 %
+}
+class "Grid" as block_block_grid {
+  block_type = grid_connection
+  max_import_power : 150 kW
+}
+class "Load" as block_block_load {
+  block_type = demand
+  demand : 120 kW
+}
+@enduml
+
+@startuml ibd
+title L3 IBD
+rectangle "block-wind" as block_block_wind
+rectangle "block-pv" as block_block_pv
+rectangle "block-battery" as block_block_battery
+rectangle "block-grid" as block_block_grid
+rectangle "block-load" as block_block_load
+block_block_wind --> block_block_load : supplies
+block_block_pv --> block_block_load : supplies
+block_block_battery --> block_block_load : supplies
+block_block_grid --> block_block_load : supplies
+@enduml
+
+@startuml activity
+title L3 Activity
+start
+:generation\ninputs: wind, pv\noutputs: load;
+:charging\ninputs: grid\noutputs: battery;
+:discharging\ninputs: battery\noutputs: load;
+:grid_purchase\ninputs: grid\noutputs: load;
+:load_consumption\ninputs: load\noutputs: none;
+stop
+@enduml
+
+@startuml state
+title L3 State
+state "Battery State Machine" as machine_state_machine_battery {
+  state "SOC" as state_battery_soc
+}
+[*] --> state_battery_soc
+@enduml
+
+@startuml parametric
+title L3 Parametric
+rectangle "rated_power\n100 kW" as param_wind_rated_power
+rectangle "rated_power\n80 kW" as param_pv_rated_power
+rectangle "capacity\n200 kWh" as param_battery_capacity
+rectangle "max_charge_power\n50 kW" as param_battery_max_charge_power
+rectangle "max_discharge_power\n50 kW" as param_battery_max_discharge_power
+rectangle "SOC_min\n20 %" as param_battery_soc_min
+rectangle "SOC_max\n90 %" as param_battery_soc_max
+rectangle "max_import_power\n150 kW" as param_grid_max_import_power
+rectangle "demand\n120 kW" as param_load_demand
+rectangle "SOC\n50 %" as param_battery_soc
+rectangle "SOC limits" as equation_equation_soc_limits
+note right of equation_equation_soc_limits : SOC_min <= SOC <= SOC_max
+param_battery_soc_min --> equation_equation_soc_limits : variable
+param_battery_soc --> equation_equation_soc_limits : variable
+param_battery_soc_max --> equation_equation_soc_limits : variable
+rectangle "operating_cost" as equation_equation_minimize_operating_cost
+note right of equation_equation_minimize_operating_cost : minimize operating_cost
+@enduml

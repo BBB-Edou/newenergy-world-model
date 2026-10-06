@@ -1,32 +1,48 @@
-"""L3: a tool-neutral SysML subset used as the L2 -> L4 boundary."""
+"""L3: validated KnowledgeState -> SysMLModel -> PlantUML."""
 
-from .generator.base import KnowledgeStateToSysMLGenerator, SysMLGenerator
-from .models import (
-    Activity,
+from .agents import SysMLAgent
+from .generator import KnowledgeStateToSysMLGenerator, SysMLGenerator
+from .mapper import KnowledgeStateToSysMLMapper
+from .plantuml import PlantUMLGenerator
+from .schema import (
+    BDD,
+    IBD,
+    ActivityAction,
+    ActivityModel,
     Block,
-    Connection,
-    ConstraintSpec,
-    Parameter,
-    Parametric,
-    Port,
+    BlockAttribute,
+    Equation,
+    IBDConnector,
+    ParameterBinding,
+    ParametricModel,
     Requirement,
-    Sequence,
     StateMachine,
+    StateModel,
+    StateTransition,
+    StateVertex,
     SysMLModel,
 )
 
 __all__ = [
-    "Activity",
+    "BDD",
+    "IBD",
+    "ActivityAction",
+    "ActivityModel",
     "Block",
-    "Connection",
-    "ConstraintSpec",
+    "BlockAttribute",
+    "Equation",
+    "IBDConnector",
     "KnowledgeStateToSysMLGenerator",
-    "Parameter",
-    "Parametric",
-    "Port",
+    "KnowledgeStateToSysMLMapper",
+    "ParameterBinding",
+    "ParametricModel",
+    "PlantUMLGenerator",
     "Requirement",
-    "Sequence",
     "StateMachine",
+    "StateModel",
+    "StateTransition",
+    "StateVertex",
+    "SysMLAgent",
     "SysMLGenerator",
     "SysMLModel",
 ]

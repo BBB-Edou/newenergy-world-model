@@ -17,3 +17,6 @@ The actual L1 demo is under `examples/renewable_energy/pdf/`. Its `demo.pdf` con
 ## L2 KnowledgeState demo
 
 `examples/renewable_energy/l2/demo_system.md` is a raw Markdown example. The offline command `python -m l2_modeling.demo` runs RequirementAgent -> ModelingAgent -> VerificationAgent with a MockLLMClient and produces a VALID KnowledgeState.
+## L3 SysML demo
+
+`python -m l3_sysml.demo` maps the renewable-energy KnowledgeState into BDD, IBD, Activity, State, Requirement, and Parametric sections, then writes JSON and PlantUML under `examples/renewable_energy/l3/`.

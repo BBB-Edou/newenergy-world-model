@@ -1,4 +1,4 @@
-"""Minimal structural SysML -> World Model IR compiler."""
+"""Minimal structural compatibility compiler for the L3 six-part SysML schema."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ from l4_compiler.world_model_ir import (
 
 
 class SysMLToWorldModelCompiler:
-    """Compile structure now; physical dynamics are intentionally deferred."""
+    """Adapt L3 structure into the existing L4 IR without adding L4 behavior."""
 
     def compile(
         self,
@@ -26,115 +26,112 @@ class SysMLToWorldModelCompiler:
         *,
         simulation: SimulationStepSpec | None = None,
     ) -> WorldModelIR:
-        ir_parameters = tuple(to_ir_parameter(parameter) for parameter in sysml_model.parameters)
+        parameters = sysml_model.parametric.parameters
+        ir_parameters = tuple(to_ir_parameter(parameter) for parameter in parameters)
         parameter_id_map = {
-            parameter.parameter_id: target.parameter_id
-            for parameter, target in zip(sysml_model.parameters, ir_parameters, strict=True)
+            (parameter.source_attribute_id or parameter.source_state_id or parameter.id): target.parameter_id
+            for parameter, target in zip(parameters, ir_parameters, strict=True)
         }
-        parameters_by_id = {parameter.parameter_id: parameter for parameter in sysml_model.parameters}
-        parameter_owner: dict[str, str] = {}
-        for block in sysml_model.blocks:
-            entity_id = f"entity-{block.block_id}"
-            for parameter_id in block.parameter_ids:
-                parameter_owner[parameter_id] = entity_id
 
+        blocks = sysml_model.bdd.blocks
+        block_by_id = {block.id: block for block in blocks}
+        parameter_owner: dict[str, str] = {}
+        for block in blocks:
+            entity_id = f"entity-{block.source_entity_id or block.id}"
+            for attribute in block.attributes:
+                parameter_owner[attribute.source_attribute_id or attribute.id] = entity_id
+
+        attribute_parameters = [
+            parameter
+            for parameter in parameters
+            if parameter.source_attribute_id and parameter.source_attribute_id in parameter_owner
+        ]
         attributes = tuple(
-            to_ir_attribute(parameter, entity_id=parameter_owner[parameter.parameter_id])
-            for parameter in sysml_model.parameters
-            if parameter.parameter_id in parameter_owner
+            to_ir_attribute(parameter, entity_id=parameter_owner[parameter.source_attribute_id or parameter.id])
+            for parameter in attribute_parameters
         )
         attribute_id_map = {
-            attribute.source_ids[0]: attribute.attribute_id
-            for attribute in attributes
-            if attribute.source_ids
+            (parameter.source_attribute_id or parameter.id): attribute.attribute_id
+            for parameter, attribute in zip(attribute_parameters, attributes, strict=True)
         }
         entities = tuple(
-            to_ir_entity(
-                block,
-                parameter_id_map=parameter_id_map,
-                attribute_id_map=attribute_id_map,
-            )
-            for block in sysml_model.blocks
+            to_ir_entity(block, parameter_id_map=parameter_id_map, attribute_id_map=attribute_id_map)
+            for block in blocks
         )
 
-        ports_by_id = {port.port_id: port for port in sysml_model.ports}
         interfaces: list[InterfaceSpec] = []
-        for connection in sysml_model.connections:
-            source_port = ports_by_id.get(connection.source_port_id)
-            target_port = ports_by_id.get(connection.target_port_id)
-            if source_port is None or target_port is None:
-                continue
-            if not source_port.source_entity_ids or not target_port.source_entity_ids:
+        for connector in sysml_model.ibd.connectors:
+            source_block = block_by_id.get(connector.source_block_id)
+            target_block = block_by_id.get(connector.target_block_id)
+            if source_block is None or target_block is None:
                 continue
             interfaces.append(
                 InterfaceSpec(
-                    interface_id=f"interface-{connection.connection_id}",
-                    name=connection.name,
-                    source_entity_id=source_port.source_entity_ids[0],
-                    target_entity_id=target_port.source_entity_ids[0],
-                    source_ids=(connection.connection_id,),
-                    metadata={"status": "placeholder", "connection_type": connection.connection_type},
+                    interface_id=f"interface-{connector.id}",
+                    name=connector.relation_type,
+                    source_entity_id=f"entity-{source_block.source_entity_id or source_block.id}",
+                    target_entity_id=f"entity-{target_block.source_entity_id or target_block.id}",
+                    source_ids=(connector.source_relation_id or connector.id,),
+                    metadata={"status": "placeholder", "connection_type": connector.relation_type},
                 )
             )
 
         constraints = tuple(
             IRConstraintSpec(
-                constraint_id=f"ir-{constraint.constraint_id}",
-                name=constraint.name,
-                expression=constraint.expression,
-                source_ids=(constraint.constraint_id,),
-                metadata={"status": "placeholder"},
+                constraint_id=f"ir-{requirement.id}",
+                name=requirement.name,
+                expression=requirement.text,
+                source_ids=tuple(requirement.source_ids),
+                metadata={"status": "placeholder", "requirement_type": requirement.requirement_type},
             )
-            for constraint in sysml_model.constraints
+            for requirement in sysml_model.requirements
+            if requirement.requirement_type == "constraint"
         )
         equations = tuple(
             EquationSpec(
-                equation_id=f"equation-{constraint.constraint_id}",
-                name=constraint.name,
-                expression=constraint.expression,
+                equation_id=f"equation-{equation.id}",
+                name=equation.name,
+                expression=equation.expression,
                 parameter_ids=tuple(
-                    parameter_id_map[parameter_id]
-                    for parameter_id in constraint.parameter_ids
-                    if parameter_id in parameter_id_map
+                    parameter_id_map[variable_id]
+                    for variable_id in equation.variable_ids
+                    if variable_id in parameter_id_map
                 ),
-                source_ids=(constraint.constraint_id,),
+                source_ids=tuple(equation.source_constraint_ids + equation.source_objective_ids),
                 metadata={"status": "placeholder"},
             )
-            for constraint in sysml_model.constraints
+            for equation in sysml_model.parametric.equations
         )
         behaviors = tuple(
             BehaviorSpec(
-                behavior_id=f"behavior-{activity.activity_id}",
-                name=activity.name,
-                source_ids=(activity.activity_id,),
-                metadata={"status": "placeholder", "action_names": activity.action_names},
+                behavior_id=f"behavior-{action.id}",
+                name=action.name,
+                source_ids=(action.source_process_id or action.id,),
+                metadata={"status": "placeholder", "action_inputs": action.inputs, "action_outputs": action.outputs},
             )
-            for activity in sysml_model.activities
+            for action in sysml_model.activity.actions
         )
-        objective_sense = {
-            "minimize": ObjectiveSense.MINIMIZE,
-            "maximize": ObjectiveSense.MAXIMIZE,
-            "undecided": ObjectiveSense.UNDECIDED,
-        }
         objectives = tuple(
             ObjectiveSpec(
-                objective_id=f"objective-{requirement.requirement_id}",
-                name=requirement.text,
-                sense=objective_sense.get(str(requirement.metadata.get("direction", "undecided")), ObjectiveSense.UNDECIDED),
-                source_ids=(requirement.requirement_id,),
-                metadata={"status": "placeholder", "source_requirement_type": requirement.requirement_type},
+                objective_id=f"objective-{requirement.id}",
+                name=requirement.name,
+                sense=self._objective_sense(requirement.text),
+                expression=requirement.text,
+                source_ids=tuple(requirement.source_ids),
+                metadata={"status": "placeholder"},
             )
             for requirement in sysml_model.requirements
-            if requirement.requirement_type == "draft-objective"
+            if requirement.requirement_type == "objective"
         )
         simulation_spec = simulation or SimulationStepSpec()
-        world_id = f"world-{sysml_model.model_id}"
+        root_block = block_by_id.get(sysml_model.bdd.root_block_id or "") if sysml_model.bdd.root_block_id else None
+        world_entity_id = root_block.source_entity_id if root_block and root_block.source_entity_id else "knowledge-state"
 
         return WorldModelIR(
-            ir_id=f"{sysml_model.model_id}-ir",
+            ir_id=f"world-{world_entity_id}-ir",
             world=WorldSpec(
-                world_id=world_id,
-                name=sysml_model.name,
+                world_id=f"world-{world_entity_id}",
+                name=sysml_model.bdd.name,
                 entity_ids=tuple(entity.entity_id for entity in entities),
                 metadata={"status": "placeholder"},
             ),
@@ -153,8 +150,16 @@ class SysMLToWorldModelCompiler:
             simulation=simulation_spec,
             metadata={
                 "status": "placeholder",
-                "source_sysml_model_id": sysml_model.model_id,
                 "compiler": self.__class__.__name__,
                 "deferred": ("state_variables", "dynamics", "events", "resources"),
             },
         )
+
+    @staticmethod
+    def _objective_sense(expression: str) -> ObjectiveSense:
+        lowered = expression.lower()
+        if "minimize" in lowered or "minimise" in lowered:
+            return ObjectiveSense.MINIMIZE
+        if "maximize" in lowered or "maximise" in lowered:
+            return ObjectiveSense.MAXIMIZE
+        return ObjectiveSense.UNDECIDED

@@ -65,7 +65,7 @@ def _summary(result: PipelineResult) -> dict[str, object]:
         "status": "placeholder",
         "raw_artifacts": len(result.raw_data.artifacts),
         "knowledge_entities": len(result.knowledge_state.entities),
-        "sysml_blocks": len(result.sysml_model.blocks),
+        "sysml_blocks": len(result.sysml_model.bdd.blocks),
         "world_model_entities": len(result.world_model_ir.entities),
         "simulation_steps": len(result.simulation_result.trace) - 1,
         "simulation_final_time": result.simulation_result.final_state.time,

@@ -1,0 +1,379 @@
+{
+  "requirements": [
+    {
+      "id": "requirement-constraint-soc_limits",
+      "name": "SOC limits",
+      "text": "SOC_min <= SOC <= SOC_max",
+      "requirement_type": "constraint",
+      "source_ids": [
+        "soc_limits"
+      ]
+    },
+    {
+      "id": "requirement-objective-minimize_operating_cost",
+      "name": "operating_cost",
+      "text": "minimize operating_cost",
+      "requirement_type": "objective",
+      "source_ids": [
+        "minimize_operating_cost"
+      ]
+    }
+  ],
+  "bdd": {
+    "name": "BDD",
+    "root_block_id": null,
+    "blocks": [
+      {
+        "id": "block-wind",
+        "name": "Wind",
+        "block_type": "renewable_source",
+        "description": null,
+        "attributes": [
+          {
+            "id": "wind_rated_power",
+            "name": "rated_power",
+            "value": 100,
+            "unit": "kW",
+            "source_attribute_id": "wind_rated_power"
+          }
+        ],
+        "source_entity_id": "wind"
+      },
+      {
+        "id": "block-pv",
+        "name": "PV",
+        "block_type": "renewable_source",
+        "description": null,
+        "attributes": [
+          {
+            "id": "pv_rated_power",
+            "name": "rated_power",
+            "value": 80,
+            "unit": "kW",
+            "source_attribute_id": "pv_rated_power"
+          }
+        ],
+        "source_entity_id": "pv"
+      },
+      {
+        "id": "block-battery",
+        "name": "Battery",
+        "block_type": "storage",
+        "description": null,
+        "attributes": [
+          {
+            "id": "battery_capacity",
+            "name": "capacity",
+            "value": 200,
+            "unit": "kWh",
+            "source_attribute_id": "battery_capacity"
+          },
+          {
+            "id": "battery_max_charge_power",
+            "name": "max_charge_power",
+            "value": 50,
+            "unit": "kW",
+            "source_attribute_id": "battery_max_charge_power"
+          },
+          {
+            "id": "battery_max_discharge_power",
+            "name": "max_discharge_power",
+            "value": 50,
+            "unit": "kW",
+            "source_attribute_id": "battery_max_discharge_power"
+          },
+          {
+            "id": "battery_soc_min",
+            "name": "SOC_min",
+            "value": 20,
+            "unit": "%",
+            "source_attribute_id": "battery_soc_min"
+          },
+          {
+            "id": "battery_soc_max",
+            "name": "SOC_max",
+            "value": 90,
+            "unit": "%",
+            "source_attribute_id": "battery_soc_max"
+          }
+        ],
+        "source_entity_id": "battery"
+      },
+      {
+        "id": "block-grid",
+        "name": "Grid",
+        "block_type": "grid_connection",
+        "description": null,
+        "attributes": [
+          {
+            "id": "grid_max_import_power",
+            "name": "max_import_power",
+            "value": 150,
+            "unit": "kW",
+            "source_attribute_id": "grid_max_import_power"
+          }
+        ],
+        "source_entity_id": "grid"
+      },
+      {
+        "id": "block-load",
+        "name": "Load",
+        "block_type": "demand",
+        "description": null,
+        "attributes": [
+          {
+            "id": "load_demand",
+            "name": "demand",
+            "value": 120,
+            "unit": "kW",
+            "source_attribute_id": "load_demand"
+          }
+        ],
+        "source_entity_id": "load"
+      }
+    ]
+  },
+  "ibd": {
+    "name": "IBD",
+    "block_ids": [
+      "block-wind",
+      "block-pv",
+      "block-battery",
+      "block-grid",
+      "block-load"
+    ],
+    "connectors": [
+      {
+        "id": "connector-wind_to_load",
+        "source_block_id": "block-wind",
+        "target_block_id": "block-load",
+        "relation_type": "supplies",
+        "description": null,
+        "source_relation_id": "wind_to_load"
+      },
+      {
+        "id": "connector-pv_to_load",
+        "source_block_id": "block-pv",
+        "target_block_id": "block-load",
+        "relation_type": "supplies",
+        "description": null,
+        "source_relation_id": "pv_to_load"
+      },
+      {
+        "id": "connector-battery_to_load",
+        "source_block_id": "block-battery",
+        "target_block_id": "block-load",
+        "relation_type": "supplies",
+        "description": null,
+        "source_relation_id": "battery_to_load"
+      },
+      {
+        "id": "connector-grid_to_load",
+        "source_block_id": "block-grid",
+        "target_block_id": "block-load",
+        "relation_type": "supplies",
+        "description": null,
+        "source_relation_id": "grid_to_load"
+      }
+    ]
+  },
+  "activity": {
+    "name": "Activity",
+    "actions": [
+      {
+        "id": "action-generation",
+        "name": "generation",
+        "description": null,
+        "inputs": [
+          "wind",
+          "pv"
+        ],
+        "outputs": [
+          "load"
+        ],
+        "source_process_id": "generation"
+      },
+      {
+        "id": "action-charging",
+        "name": "charging",
+        "description": null,
+        "inputs": [
+          "grid"
+        ],
+        "outputs": [
+          "battery"
+        ],
+        "source_process_id": "charging"
+      },
+      {
+        "id": "action-discharging",
+        "name": "discharging",
+        "description": null,
+        "inputs": [
+          "battery"
+        ],
+        "outputs": [
+          "load"
+        ],
+        "source_process_id": "discharging"
+      },
+      {
+        "id": "action-grid_purchase",
+        "name": "grid_purchase",
+        "description": null,
+        "inputs": [
+          "grid"
+        ],
+        "outputs": [
+          "load"
+        ],
+        "source_process_id": "grid_purchase"
+      },
+      {
+        "id": "action-load_consumption",
+        "name": "load_consumption",
+        "description": null,
+        "inputs": [
+          "load"
+        ],
+        "outputs": [],
+        "source_process_id": "load_consumption"
+      }
+    ]
+  },
+  "state": {
+    "name": "State",
+    "machines": [
+      {
+        "id": "state-machine-battery",
+        "name": "Battery State Machine",
+        "block_id": "block-battery",
+        "states": [
+          {
+            "id": "battery_soc",
+            "name": "SOC",
+            "description": null,
+            "value": 50,
+            "unit": "%",
+            "source_state_id": "battery_soc"
+          }
+        ],
+        "transitions": [],
+        "source_entity_ids": [
+          "battery"
+        ]
+      }
+    ]
+  },
+  "parametric": {
+    "name": "Parametric",
+    "parameters": [
+      {
+        "id": "wind_rated_power",
+        "name": "rated_power",
+        "value": 100,
+        "unit": "kW",
+        "source_attribute_id": "wind_rated_power",
+        "source_state_id": null
+      },
+      {
+        "id": "pv_rated_power",
+        "name": "rated_power",
+        "value": 80,
+        "unit": "kW",
+        "source_attribute_id": "pv_rated_power",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_capacity",
+        "name": "capacity",
+        "value": 200,
+        "unit": "kWh",
+        "source_attribute_id": "battery_capacity",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_max_charge_power",
+        "name": "max_charge_power",
+        "value": 50,
+        "unit": "kW",
+        "source_attribute_id": "battery_max_charge_power",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_max_discharge_power",
+        "name": "max_discharge_power",
+        "value": 50,
+        "unit": "kW",
+        "source_attribute_id": "battery_max_discharge_power",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_soc_min",
+        "name": "SOC_min",
+        "value": 20,
+        "unit": "%",
+        "source_attribute_id": "battery_soc_min",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_soc_max",
+        "name": "SOC_max",
+        "value": 90,
+        "unit": "%",
+        "source_attribute_id": "battery_soc_max",
+        "source_state_id": null
+      },
+      {
+        "id": "grid_max_import_power",
+        "name": "max_import_power",
+        "value": 150,
+        "unit": "kW",
+        "source_attribute_id": "grid_max_import_power",
+        "source_state_id": null
+      },
+      {
+        "id": "load_demand",
+        "name": "demand",
+        "value": 120,
+        "unit": "kW",
+        "source_attribute_id": "load_demand",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_soc",
+        "name": "SOC",
+        "value": 50,
+        "unit": "%",
+        "source_attribute_id": null,
+        "source_state_id": "battery_soc"
+      }
+    ],
+    "equations": [
+      {
+        "id": "equation-soc_limits",
+        "name": "SOC limits",
+        "expression": "SOC_min <= SOC <= SOC_max",
+        "variable_ids": [
+          "battery_soc_min",
+          "battery_soc",
+          "battery_soc_max"
+        ],
+        "source_constraint_ids": [
+          "soc_limits"
+        ],
+        "source_objective_ids": []
+      },
+      {
+        "id": "equation-minimize_operating_cost",
+        "name": "operating_cost",
+        "expression": "minimize operating_cost",
+        "variable_ids": [],
+        "source_constraint_ids": [],
+        "source_objective_ids": [
+          "minimize_operating_cost"
+        ]
+      }
+    ]
+  }
+}

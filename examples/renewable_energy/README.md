@@ -30,3 +30,17 @@ python -m l2_modeling.demo
 ```
 
 The demo uses MockLLMClient only and does not call DeepSeek.
+## L3 KnowledgeState -> SysML -> PlantUML demo
+
+```powershell
+python -m l3_sysml.demo
+```
+
+Outputs:
+
+```text
+examples/renewable_energy/l3/demo_sysml.json
+examples/renewable_energy/l3/demo_sysml.puml
+```
+
+The demo is deterministic and uses no API.

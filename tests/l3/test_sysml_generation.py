@@ -7,7 +7,7 @@ from l3_sysml import KnowledgeStateToSysMLGenerator
 
 
 class SysMLGenerationTests(unittest.TestCase):
-    def test_entities_and_relations_map_to_blocks_and_connections(self) -> None:
+    def test_entities_and_relations_map_to_bdd_and_ibd(self) -> None:
         state = KnowledgeState(
             entities=(Entity(id="a", name="A", entity_type="generic"), Entity(id="b", name="B", entity_type="generic")),
             relations=(Relation(id="a-to-b", source_entity_id="a", target_entity_id="b", relation_type="related_to"),),
@@ -15,10 +15,8 @@ class SysMLGenerationTests(unittest.TestCase):
 
         model = KnowledgeStateToSysMLGenerator().generate(state)
 
-        self.assertEqual(len(model.blocks), 2)
-        self.assertEqual(len(model.ports), 2)
-        self.assertEqual(len(model.connections), 1)
-        self.assertEqual(model.metadata["status"], "placeholder")
+        self.assertEqual(len(model.bdd.blocks), 2)
+        self.assertEqual(len(model.ibd.connectors), 1)
 
 
 if __name__ == "__main__":

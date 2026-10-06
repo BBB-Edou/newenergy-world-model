@@ -6,7 +6,7 @@ The project separates concerns into six replaceable layers:
 |---|---|---|---|
 | L1 | PDF (legacy skeleton keeps other raw artifact types) | `RawDocument` -> Markdown / `MarkdownDocument` | PDF structure is preserved without LLM interpretation |
 | L2 | Markdown `RawDocument` | Validated `KnowledgeState` | four logical agents, deterministic verification, limited user interaction loop |
-| L3 | `KnowledgeState` | `SysMLModel` | requirements, blocks, ports, connections, activities, state machines, sequences, constraints, parameters |
+| L3 | Validated `KnowledgeState` | `SysMLModel` -> PlantUML | exactly six sections: Requirements, BDD, IBD, Activity, State, Parametric |
 | L4 | `SysMLModel` | `WorldModelIR` | independent IR with entities, state variables, parameters, dynamics, events, interfaces and simulation settings |
 | L5 | `WorldModelIR` | `SimulationResult` | executable model contract and runtime state |
 | L6 | `SimulationResult` | `OptimizationResult` | model-neutral optimization problem and solver contract |

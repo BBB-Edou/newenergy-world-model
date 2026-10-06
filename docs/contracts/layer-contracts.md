@@ -64,3 +64,19 @@ Invalid JSON or Pydantic validation is retried once and then raises `AgentOutput
 ## L5 -> L6
 
 `SimulationResult` is sufficient to create an `OptimizationProblem`. A solver adapter returns `OptimizationResult`.
+## L3 SysML Contract
+
+`SysMLAgent.run(validated_knowledge_state) -> SysMLModel` uses the shared `LLMClient` from L2.
+
+`SysMLModel` contains exactly:
+
+```text
+requirements
+bdd
+ibd
+activity
+state
+parametric
+```
+
+No additional top-level SysML branches are introduced. `PlantUMLGenerator.generate(sysml_model) -> str` renders all six sections for human inspection.

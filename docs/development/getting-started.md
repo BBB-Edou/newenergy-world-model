@@ -53,3 +53,17 @@ python -m l2_modeling.live_test examples/renewable_energy/l2/demo_system.md --li
 ```
 
 Do not place API keys in source files or test fixtures.
+## Run L3 offline demo
+
+```powershell
+python -m l3_sysml.demo
+```
+
+## Optional live L3 SysML Agent test
+
+```powershell
+$env:DEEPSEEK_API_KEY = "..."
+python -m l3_sysml.live_test --live
+```
+
+The live test reuses the existing L2 DeepSeek client configuration.

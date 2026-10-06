@@ -1,23 +1,703 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.local/schemas/sysml/sysml_model.schema.json",
-  "title": "SysMLModel",
-  "type": "object",
-  "required": ["model_id", "name"],
-  "properties": {
-    "model_id": {"type": "string", "minLength": 1},
-    "name": {"type": "string", "minLength": 1},
-    "requirements": {"type": "array", "items": {"type": "object"}},
-    "blocks": {"type": "array", "items": {"type": "object", "required": ["block_id", "name"]}},
-    "ports": {"type": "array", "items": {"type": "object", "required": ["port_id", "name"]}},
-    "connections": {"type": "array", "items": {"type": "object", "required": ["connection_id", "source_port_id", "target_port_id"]}},
-    "activities": {"type": "array", "items": {"type": "object"}},
-    "state_machines": {"type": "array", "items": {"type": "object"}},
-    "sequences": {"type": "array", "items": {"type": "object"}},
-    "constraints": {"type": "array", "items": {"type": "object"}},
-    "parameters": {"type": "array", "items": {"type": "object"}},
-    "parametrics": {"type": "array", "items": {"type": "object"}},
-    "metadata": {"type": "object"}
+  "$defs": {
+    "ActivityAction": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "inputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Inputs",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "source_process_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Process Id"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "ActivityAction",
+      "type": "object"
+    },
+    "ActivityModel": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "Activity",
+          "title": "Name",
+          "type": "string"
+        },
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/ActivityAction"
+          },
+          "title": "Actions",
+          "type": "array"
+        }
+      },
+      "title": "ActivityModel",
+      "type": "object"
+    },
+    "BDD": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "BDD",
+          "title": "Name",
+          "type": "string"
+        },
+        "root_block_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Root Block Id"
+        },
+        "blocks": {
+          "items": {
+            "$ref": "#/$defs/Block"
+          },
+          "title": "Blocks",
+          "type": "array"
+        }
+      },
+      "title": "BDD",
+      "type": "object"
+    },
+    "Block": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "block_type": {
+          "title": "Block Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "attributes": {
+          "items": {
+            "$ref": "#/$defs/BlockAttribute"
+          },
+          "title": "Attributes",
+          "type": "array"
+        },
+        "source_entity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Entity Id"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "block_type"
+      ],
+      "title": "Block",
+      "type": "object"
+    },
+    "BlockAttribute": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "source_attribute_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Attribute Id"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "BlockAttribute",
+      "type": "object"
+    },
+    "Equation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "expression": {
+          "title": "Expression",
+          "type": "string"
+        },
+        "variable_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Variable Ids",
+          "type": "array"
+        },
+        "source_constraint_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Constraint Ids",
+          "type": "array"
+        },
+        "source_objective_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Objective Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "expression"
+      ],
+      "title": "Equation",
+      "type": "object"
+    },
+    "IBD": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "IBD",
+          "title": "Name",
+          "type": "string"
+        },
+        "block_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Block Ids",
+          "type": "array"
+        },
+        "connectors": {
+          "items": {
+            "$ref": "#/$defs/IBDConnector"
+          },
+          "title": "Connectors",
+          "type": "array"
+        }
+      },
+      "title": "IBD",
+      "type": "object"
+    },
+    "IBDConnector": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_block_id": {
+          "title": "Source Block Id",
+          "type": "string"
+        },
+        "target_block_id": {
+          "title": "Target Block Id",
+          "type": "string"
+        },
+        "relation_type": {
+          "title": "Relation Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "source_relation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Relation Id"
+        }
+      },
+      "required": [
+        "id",
+        "source_block_id",
+        "target_block_id",
+        "relation_type"
+      ],
+      "title": "IBDConnector",
+      "type": "object"
+    },
+    "ParameterBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "source_attribute_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Attribute Id"
+        },
+        "source_state_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source State Id"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "ParameterBinding",
+      "type": "object"
+    },
+    "ParametricModel": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "Parametric",
+          "title": "Name",
+          "type": "string"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/ParameterBinding"
+          },
+          "title": "Parameters",
+          "type": "array"
+        },
+        "equations": {
+          "items": {
+            "$ref": "#/$defs/Equation"
+          },
+          "title": "Equations",
+          "type": "array"
+        }
+      },
+      "title": "ParametricModel",
+      "type": "object"
+    },
+    "Requirement": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "requirement_type": {
+          "default": "system",
+          "enum": [
+            "system",
+            "constraint",
+            "objective"
+          ],
+          "title": "Requirement Type",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "text"
+      ],
+      "title": "Requirement",
+      "type": "object"
+    },
+    "StateMachine": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "block_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Block Id"
+        },
+        "states": {
+          "items": {
+            "$ref": "#/$defs/StateVertex"
+          },
+          "title": "States",
+          "type": "array"
+        },
+        "transitions": {
+          "items": {
+            "$ref": "#/$defs/StateTransition"
+          },
+          "title": "Transitions",
+          "type": "array"
+        },
+        "source_entity_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Entity Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "StateMachine",
+      "type": "object"
+    },
+    "StateModel": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "State",
+          "title": "Name",
+          "type": "string"
+        },
+        "machines": {
+          "items": {
+            "$ref": "#/$defs/StateMachine"
+          },
+          "title": "Machines",
+          "type": "array"
+        }
+      },
+      "title": "StateModel",
+      "type": "object"
+    },
+    "StateTransition": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_state_id": {
+          "title": "Source State Id",
+          "type": "string"
+        },
+        "target_state_id": {
+          "title": "Target State Id",
+          "type": "string"
+        },
+        "trigger": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trigger"
+        },
+        "effect": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effect"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source_state_id",
+        "target_state_id"
+      ],
+      "title": "StateTransition",
+      "type": "object"
+    },
+    "StateVertex": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "source_state_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source State Id"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "StateVertex",
+      "type": "object"
+    }
   },
-  "additionalProperties": true
+  "additionalProperties": false,
+  "properties": {
+    "requirements": {
+      "items": {
+        "$ref": "#/$defs/Requirement"
+      },
+      "title": "Requirements",
+      "type": "array"
+    },
+    "bdd": {
+      "$ref": "#/$defs/BDD"
+    },
+    "ibd": {
+      "$ref": "#/$defs/IBD"
+    },
+    "activity": {
+      "$ref": "#/$defs/ActivityModel"
+    },
+    "state": {
+      "$ref": "#/$defs/StateModel"
+    },
+    "parametric": {
+      "$ref": "#/$defs/ParametricModel"
+    }
+  },
+  "title": "SysMLModel",
+  "type": "object"
 }

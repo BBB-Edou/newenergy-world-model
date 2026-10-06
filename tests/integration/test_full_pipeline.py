@@ -18,7 +18,7 @@ class FullPipelineTests(unittest.TestCase):
         result = run_pipeline(raw_data=raw_data, steps=2, step_size=1.0)
 
         self.assertEqual(len(result.knowledge_state.entities), 5)
-        self.assertEqual(len(result.sysml_model.blocks), 5)
+        self.assertEqual(len(result.sysml_model.bdd.blocks), 5)
         self.assertEqual(len(result.world_model_ir.entities), 5)
         self.assertEqual(result.simulation_result.final_state.time, 2.0)
         self.assertEqual(result.optimization_result.status.value, "placeholder")
