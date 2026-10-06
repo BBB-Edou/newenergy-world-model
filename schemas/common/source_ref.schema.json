@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/common/source_ref.schema.json",
+  "title": "SourceRef",
+  "type": "object",
+  "required": ["source_id", "kind"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "kind": {"type": "string", "minLength": 1},
+    "uri": {"type": ["string", "null"]},
+    "location": {"type": ["string", "null"]},
+    "excerpt": {"type": ["string", "null"]},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}

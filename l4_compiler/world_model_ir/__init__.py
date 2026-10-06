@@ -1,0 +1,43 @@
+"""Independent World Model IR contracts."""
+
+from .models import (
+    AttributeSpec,
+    BehaviorSpec,
+    ConstraintSpec,
+    DynamicsKind,
+    DynamicsSpec,
+    EntitySpec,
+    EquationSpec,
+    EventSpec,
+    InterfaceSpec,
+    ObjectiveSense,
+    ObjectiveSpec,
+    ParameterSpec,
+    ResourceSpec,
+    SimulationStepSpec,
+    StateVariableSpec,
+    VariableType,
+    WorldModelIR,
+    WorldSpec,
+)
+
+__all__ = [
+    "AttributeSpec",
+    "BehaviorSpec",
+    "ConstraintSpec",
+    "DynamicsKind",
+    "DynamicsSpec",
+    "EntitySpec",
+    "EquationSpec",
+    "EventSpec",
+    "InterfaceSpec",
+    "ObjectiveSense",
+    "ObjectiveSpec",
+    "ParameterSpec",
+    "ResourceSpec",
+    "SimulationStepSpec",
+    "StateVariableSpec",
+    "VariableType",
+    "WorldModelIR",
+    "WorldSpec",
+]

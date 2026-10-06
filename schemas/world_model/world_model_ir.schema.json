@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/world_model/world_model_ir.schema.json",
+  "title": "WorldModelIR",
+  "type": "object",
+  "required": ["ir_id", "version", "entities", "attributes", "state_variables", "parameters", "behaviors", "events", "resources", "interfaces", "constraints", "equations", "objectives", "simulation"],
+  "properties": {
+    "ir_id": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "world": {"type": ["object", "null"]},
+    "entities": {"type": "array", "items": {"type": "object", "required": ["entity_id", "name", "entity_type"]}},
+    "attributes": {"type": "array", "items": {"type": "object", "required": ["attribute_id", "entity_id", "name"]}},
+    "state_variables": {"type": "array", "items": {"type": "object", "required": ["state_variable_id", "entity_id", "name"]}},
+    "parameters": {"type": "array", "items": {"type": "object", "required": ["parameter_id", "name"]}},
+    "behaviors": {"type": "array", "items": {"type": "object", "required": ["behavior_id", "name", "kind"]}},
+    "dynamics": {"type": "array", "items": {"type": "object", "required": ["dynamics_id", "name", "kind"]}},
+    "events": {"type": "array", "items": {"type": "object", "required": ["event_id", "name"]}},
+    "resources": {"type": "array", "items": {"type": "object", "required": ["resource_id", "name"]}},
+    "interfaces": {"type": "array", "items": {"type": "object", "required": ["interface_id", "name", "source_entity_id", "target_entity_id"]}},
+    "constraints": {"type": "array", "items": {"type": "object", "required": ["constraint_id", "name"]}},
+    "equations": {"type": "array", "items": {"type": "object", "required": ["equation_id", "name"]}},
+    "objectives": {"type": "array", "items": {"type": "object", "required": ["objective_id", "name", "sense"]}},
+    "simulation": {"type": "object", "required": ["step_size", "horizon", "time_unit"]},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,107 @@
+{
+  "$defs": {
+    "VerificationIssue": {
+      "additionalProperties": false,
+      "properties": {
+        "issue_id": {
+          "title": "Issue Id",
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "error",
+            "warning",
+            "info"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "issue_type": {
+          "enum": [
+            "missing",
+            "conflict",
+            "invalid_type",
+            "invalid_value",
+            "invalid_reference",
+            "constraint_error",
+            "other"
+          ],
+          "title": "Issue Type",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "target_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Type"
+        },
+        "target_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Id"
+        },
+        "target_field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Field"
+        }
+      },
+      "required": [
+        "issue_id",
+        "severity",
+        "issue_type",
+        "message"
+      ],
+      "title": "VerificationIssue",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "VALID",
+        "NEED_INPUT",
+        "INVALID"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "issues": {
+      "items": {
+        "$ref": "#/$defs/VerificationIssue"
+      },
+      "title": "Issues",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status"
+  ],
+  "title": "VerificationResult",
+  "type": "object"
+}

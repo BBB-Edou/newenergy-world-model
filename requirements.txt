@@ -1,0 +1,9 @@
+# L1 runtime
+pymupdf>=1.24
+
+# L2 strict schemas and DeepSeek-compatible API
+pydantic>=2.7
+openai>=1.30
+
+# Test runner
+pytest>=8.0

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/sysml/sysml_model.schema.json",
+  "title": "SysMLModel",
+  "type": "object",
+  "required": ["model_id", "name"],
+  "properties": {
+    "model_id": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "requirements": {"type": "array", "items": {"type": "object"}},
+    "blocks": {"type": "array", "items": {"type": "object", "required": ["block_id", "name"]}},
+    "ports": {"type": "array", "items": {"type": "object", "required": ["port_id", "name"]}},
+    "connections": {"type": "array", "items": {"type": "object", "required": ["connection_id", "source_port_id", "target_port_id"]}},
+    "activities": {"type": "array", "items": {"type": "object"}},
+    "state_machines": {"type": "array", "items": {"type": "object"}},
+    "sequences": {"type": "array", "items": {"type": "object"}},
+    "constraints": {"type": "array", "items": {"type": "object"}},
+    "parameters": {"type": "array", "items": {"type": "object"}},
+    "parametrics": {"type": "array", "items": {"type": "object"}},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

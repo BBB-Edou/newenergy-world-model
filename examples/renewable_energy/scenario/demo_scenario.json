@@ -1,0 +1,17 @@
+{
+  "scenario_id": "renewable_energy_demo",
+  "name": "Renewable Energy Component Placeholder Scenario",
+  "components": [
+    {"id": "wind", "name": "Wind", "kind": "energy_system_component", "aliases": ["wind_energy"], "attributes": {}},
+    {"id": "pv", "name": "PV", "kind": "energy_system_component", "aliases": ["photovoltaic"], "attributes": {}},
+    {"id": "battery", "name": "Battery", "kind": "energy_system_component", "aliases": [], "attributes": {}},
+    {"id": "grid", "name": "Grid", "kind": "energy_system_component", "aliases": [], "attributes": {}},
+    {"id": "load", "name": "Load", "kind": "energy_system_component", "aliases": [], "attributes": {}}
+  ],
+  "relations": [],
+  "metadata": {
+    "data_class": "example/demo",
+    "status": "placeholder",
+    "notice": "No physical parameters, prices, profiles, SOC values or optimization assumptions are included."
+  }
+}

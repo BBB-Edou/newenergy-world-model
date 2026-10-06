@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {"id": "L1", "package": "l1_data", "contract": "RawDataBundle"},
+    {"id": "L2", "package": "l2_modeling", "contract": "KnowledgeState"},
+    {"id": "L3", "package": "l3_sysml", "contract": "SysMLModel"},
+    {"id": "L4", "package": "l4_compiler", "contract": "WorldModelIR"},
+    {"id": "L5", "package": "l5_world_model", "contract": "ExecutableWorldModel"},
+    {"id": "L6", "package": "l6_optimization", "contract": "Solver"}
+  ],
+  "status": "skeleton"
+}

@@ -1,0 +1,9 @@
+{
+  "pipeline_id": "renewable_energy_demo",
+  "scenario_path": "examples/renewable_energy/scenario/demo_scenario.json",
+  "simulation": {
+    "steps": 3,
+    "step_size": 1.0
+  },
+  "status": "example/demo"
+}

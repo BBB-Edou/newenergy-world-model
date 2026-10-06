@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/common/confidence.schema.json",
+  "title": "Confidence",
+  "type": "object",
+  "required": ["score"],
+  "properties": {
+    "score": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+    "rationale": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,1 @@
+"""Executable entity implementations will be added after the IR contract stabilizes."""
