@@ -74,3 +74,48 @@ python -m l4_compiler.demo
 ```
 
 This compiles `examples/renewable_energy/l3/demo_sysml.json` into `examples/renewable_energy/l4/world_model.json`.
+## Run L2 ScenarioData demo
+
+```powershell
+python -m l2_modeling.scenario_demo
+```
+
+Outputs:
+
+```text
+examples/renewable_energy/scenario_data/scenario_data.json
+examples/renewable_energy/scenario_data/scenario_data.csv
+```
+## Run Scenario Input Alignment demo
+
+```powershell
+python -m scenario_binding.demo
+```
+
+This aligns `WorldModelIR` with `ScenarioData` and writes `scenario_input_binding.json`.
+## Run L5 24h simulation demo
+
+```powershell
+python -m l5_world_model.demo
+```
+
+This writes `examples/renewable_energy/l5/simulation_result.json`.
+## Run L6 optimization demo (CVXPY -> L5 closed loop)
+
+```powershell
+python -m l6_optimization.demo
+```
+
+This optimizes the 24h dispatch with CVXPY, executes the optimal `Action`
+sequence through the L5 `WorldModelRuntime`, and writes
+`examples/renewable_energy/l6/optimization_result.json`. Add `cvxpy` via
+`python -m pip install -r requirements.txt` if it is not yet installed.
+
+## Run L6 what-if demo
+
+```powershell
+python -m l6_optimization.what_if_demo
+```
+
+This re-optimizes and re-simulates battery-size, price and renewable variants
+and writes `examples/renewable_energy/l6/what_if_result.json`.

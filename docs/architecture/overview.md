@@ -9,7 +9,7 @@ The project separates concerns into six replaceable layers:
 | L3 | Validated `KnowledgeState` | `SysMLModel` -> PlantUML | exactly six sections: Requirements, BDD, IBD, Activity, State, Parametric |
 | L4 | Validated `SysMLModel` | Validated `WorldModelIR` | deterministic six-view mapping, traceability, IR validation and ExecutableModel interface |
 | L5 | `WorldModelIR` | `SimulationResult` | executable model contract and runtime state |
-| L6 | `SimulationResult` | `OptimizationResult` | model-neutral optimization problem and solver contract |
+| L6 | `WorldModelIR` + `ScenarioInputBinding` (+ optional `SimulationResult`) | `OptimizationResult` (+ `SimulationResult`, `WhatIfResult`) | CVXPY dispatch optimization emitting L5 `Action`s; model-neutral problem+solver contract retained |
 
 The dependency direction is downwards only. A lower layer does not import a higher layer. L5 never imports a SysML tool, and L6 never imports a concrete world model implementation.
 

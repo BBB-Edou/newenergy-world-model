@@ -1,0 +1,3755 @@
+{
+  "simulation_id": "world-model-ir-renewable_energy_24h-simulation",
+  "model_id": "world-model-ir",
+  "status": "COMPLETED",
+  "metadata": {
+    "scenario_id": "renewable_energy_24h",
+    "binding_status": "READY",
+    "steps": 24,
+    "step_size": 1.0,
+    "time_unit": "h"
+  },
+  "initial_state": {
+    "time": 0.0,
+    "step_index": 0,
+    "values": {
+      "state-battery_soc": 50
+    },
+    "metadata": {
+      "status": "initialized"
+    }
+  },
+  "final_state": {
+    "time": 24.0,
+    "step_index": 24,
+    "values": {
+      "state-battery_soc": 57.44736842105263
+    },
+    "metadata": {
+      "status": "running"
+    }
+  },
+  "states": [
+    {
+      "time": 0.0,
+      "step_index": 0,
+      "values": {
+        "state-battery_soc": 50
+      },
+      "metadata": {
+        "status": "initialized"
+      }
+    },
+    {
+      "time": 1.0,
+      "step_index": 1,
+      "values": {
+        "state-battery_soc": 59.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 2.0,
+      "step_index": 2,
+      "values": {
+        "state-battery_soc": 69.0
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 3.0,
+      "step_index": 3,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 4.0,
+      "step_index": 4,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 5.0,
+      "step_index": 5,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 6.0,
+      "step_index": 6,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 7.0,
+      "step_index": 7,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 8.0,
+      "step_index": 8,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 9.0,
+      "step_index": 9,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 10.0,
+      "step_index": 10,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 11.0,
+      "step_index": 11,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 12.0,
+      "step_index": 12,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 13.0,
+      "step_index": 13,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 14.0,
+      "step_index": 14,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 15.0,
+      "step_index": 15,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 16.0,
+      "step_index": 16,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 17.0,
+      "step_index": 17,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 18.0,
+      "step_index": 18,
+      "values": {
+        "state-battery_soc": 78.5
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 19.0,
+      "step_index": 19,
+      "values": {
+        "state-battery_soc": 67.97368421052632
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 20.0,
+      "step_index": 20,
+      "values": {
+        "state-battery_soc": 57.44736842105263
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 21.0,
+      "step_index": 21,
+      "values": {
+        "state-battery_soc": 57.44736842105263
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 22.0,
+      "step_index": 22,
+      "values": {
+        "state-battery_soc": 57.44736842105263
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 23.0,
+      "step_index": 23,
+      "values": {
+        "state-battery_soc": 57.44736842105263
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    {
+      "time": 24.0,
+      "step_index": 24,
+      "values": {
+        "state-battery_soc": 57.44736842105263
+      },
+      "metadata": {
+        "status": "running"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "dispatch-0",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-1",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-2",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-3",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-4",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-5",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-6",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-7",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-8",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-9",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-10",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-11",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-12",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-13",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-14",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-15",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-16",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-17",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-18",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 20.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-19",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 20.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-20",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-21",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-22",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    },
+    {
+      "action_id": "dispatch-23",
+      "name": "fixed_demo_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0
+      },
+      "metadata": {}
+    }
+  ],
+  "inputs": [
+    {
+      "electricity_price": 0.2,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.2,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.2,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.2,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.2,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.2,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.3,
+      "load_power": 150.0,
+      "pv_power": 20.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.4,
+      "load_power": 150.0,
+      "pv_power": 50.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.5,
+      "load_power": 150.0,
+      "pv_power": 80.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.5,
+      "load_power": 150.0,
+      "pv_power": 100.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.45,
+      "load_power": 150.0,
+      "pv_power": 100.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.4,
+      "load_power": 150.0,
+      "pv_power": 80.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.35,
+      "load_power": 150.0,
+      "pv_power": 60.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.35,
+      "load_power": 150.0,
+      "pv_power": 40.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.4,
+      "load_power": 150.0,
+      "pv_power": 20.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.5,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.7,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.9,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 1.1,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 1.0,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.8,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.5,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.35,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    },
+    {
+      "electricity_price": 0.25,
+      "load_power": 150.0,
+      "pv_power": 0.0,
+      "wind_power": 100.0
+    }
+  ],
+  "events": [
+    {
+      "event_id": "event-start-0",
+      "event_type": "SimulationStart",
+      "time": 0.0,
+      "step_index": 0,
+      "message": "simulation started",
+      "metadata": {}
+    },
+    {
+      "event_id": "event-end-24",
+      "event_type": "SimulationEnd",
+      "time": 24.0,
+      "step_index": 24,
+      "message": "simulation ended",
+      "metadata": {}
+    }
+  ],
+  "constraint_violations": [],
+  "metrics": [
+    {
+      "name": "total_cost",
+      "value": 359.5,
+      "unit": "CNY",
+      "metadata": {
+        "available": true
+      }
+    },
+    {
+      "name": "renewable_utilization",
+      "value": 0.9423728813559322,
+      "unit": null,
+      "metadata": {}
+    },
+    {
+      "name": "curtailment",
+      "value": 170.0,
+      "unit": "kWh",
+      "metadata": {}
+    },
+    {
+      "name": "peak_grid_import",
+      "value": 70.0,
+      "unit": "kW",
+      "metadata": {}
+    },
+    {
+      "name": "final_soc",
+      "value": 57.44736842105263,
+      "unit": "%",
+      "metadata": {}
+    },
+    {
+      "name": "constraint_violation_count",
+      "value": 0,
+      "unit": null,
+      "metadata": {}
+    }
+  ],
+  "step_metrics": [
+    {
+      "step_index": 0,
+      "timestamp": "00:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 59.5,
+      "battery_charge": 20.0,
+      "battery_discharge": 0.0,
+      "grid_import": 70.0,
+      "curtailment": 0.0,
+      "cost": 14.0
+    },
+    {
+      "step_index": 1,
+      "timestamp": "01:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 69.0,
+      "battery_charge": 20.0,
+      "battery_discharge": 0.0,
+      "grid_import": 70.0,
+      "curtailment": 0.0,
+      "cost": 14.0
+    },
+    {
+      "step_index": 2,
+      "timestamp": "02:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 20.0,
+      "battery_discharge": 0.0,
+      "grid_import": 70.0,
+      "curtailment": 0.0,
+      "cost": 14.0
+    },
+    {
+      "step_index": 3,
+      "timestamp": "03:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 10.0
+    },
+    {
+      "step_index": 4,
+      "timestamp": "04:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 10.0
+    },
+    {
+      "step_index": 5,
+      "timestamp": "05:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 10.0
+    },
+    {
+      "step_index": 6,
+      "timestamp": "06:00",
+      "wind_power": 100.0,
+      "pv_power": 20.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 30.0,
+      "curtailment": 0.0,
+      "cost": 9.0
+    },
+    {
+      "step_index": 7,
+      "timestamp": "07:00",
+      "wind_power": 100.0,
+      "pv_power": 50.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 0.0,
+      "cost": 0.0
+    },
+    {
+      "step_index": 8,
+      "timestamp": "08:00",
+      "wind_power": 100.0,
+      "pv_power": 80.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 30.0,
+      "cost": 0.0
+    },
+    {
+      "step_index": 9,
+      "timestamp": "09:00",
+      "wind_power": 100.0,
+      "pv_power": 100.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 50.0,
+      "cost": 0.0
+    },
+    {
+      "step_index": 10,
+      "timestamp": "10:00",
+      "wind_power": 100.0,
+      "pv_power": 100.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 50.0,
+      "cost": 0.0
+    },
+    {
+      "step_index": 11,
+      "timestamp": "11:00",
+      "wind_power": 100.0,
+      "pv_power": 80.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 30.0,
+      "cost": 0.0
+    },
+    {
+      "step_index": 12,
+      "timestamp": "12:00",
+      "wind_power": 100.0,
+      "pv_power": 60.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 10.0,
+      "cost": 0.0
+    },
+    {
+      "step_index": 13,
+      "timestamp": "13:00",
+      "wind_power": 100.0,
+      "pv_power": 40.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 10.0,
+      "curtailment": 0.0,
+      "cost": 3.5
+    },
+    {
+      "step_index": 14,
+      "timestamp": "14:00",
+      "wind_power": 100.0,
+      "pv_power": 20.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 30.0,
+      "curtailment": 0.0,
+      "cost": 12.0
+    },
+    {
+      "step_index": 15,
+      "timestamp": "15:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 25.0
+    },
+    {
+      "step_index": 16,
+      "timestamp": "16:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 35.0
+    },
+    {
+      "step_index": 17,
+      "timestamp": "17:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 78.5,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 45.0
+    },
+    {
+      "step_index": 18,
+      "timestamp": "18:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 67.97368421052632,
+      "battery_charge": 0.0,
+      "battery_discharge": 20.0,
+      "grid_import": 30.0,
+      "curtailment": 0.0,
+      "cost": 33.0
+    },
+    {
+      "step_index": 19,
+      "timestamp": "19:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 57.44736842105263,
+      "battery_charge": 0.0,
+      "battery_discharge": 20.0,
+      "grid_import": 30.0,
+      "curtailment": 0.0,
+      "cost": 30.0
+    },
+    {
+      "step_index": 20,
+      "timestamp": "20:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 57.44736842105263,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 40.0
+    },
+    {
+      "step_index": 21,
+      "timestamp": "21:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 57.44736842105263,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 25.0
+    },
+    {
+      "step_index": 22,
+      "timestamp": "22:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 57.44736842105263,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 17.5
+    },
+    {
+      "step_index": 23,
+      "timestamp": "23:00",
+      "wind_power": 100.0,
+      "pv_power": 0.0,
+      "load_power": 150.0,
+      "battery_soc": 57.44736842105263,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 50.0,
+      "curtailment": 0.0,
+      "cost": 12.5
+    }
+  ],
+  "steps": [
+    {
+      "step_index": 0,
+      "time": 1.0,
+      "timestamp": "00:00",
+      "state_before": {
+        "time": 0.0,
+        "step_index": 0,
+        "values": {
+          "state-battery_soc": 50
+        },
+        "metadata": {
+          "status": "initialized"
+        }
+      },
+      "state_after": {
+        "time": 1.0,
+        "step_index": 1,
+        "values": {
+          "state-battery_soc": 59.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-0",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 20.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 0,
+        "timestamp": "00:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 59.5,
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0,
+        "grid_import": 70.0,
+        "curtailment": 0.0,
+        "cost": 14.0
+      }
+    },
+    {
+      "step_index": 1,
+      "time": 2.0,
+      "timestamp": "01:00",
+      "state_before": {
+        "time": 1.0,
+        "step_index": 1,
+        "values": {
+          "state-battery_soc": 59.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 2.0,
+        "step_index": 2,
+        "values": {
+          "state-battery_soc": 69.0
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-1",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 20.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 1,
+        "timestamp": "01:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 69.0,
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0,
+        "grid_import": 70.0,
+        "curtailment": 0.0,
+        "cost": 14.0
+      }
+    },
+    {
+      "step_index": 2,
+      "time": 3.0,
+      "timestamp": "02:00",
+      "state_before": {
+        "time": 2.0,
+        "step_index": 2,
+        "values": {
+          "state-battery_soc": 69.0
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 3.0,
+        "step_index": 3,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-2",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 20.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 2,
+        "timestamp": "02:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0,
+        "grid_import": 70.0,
+        "curtailment": 0.0,
+        "cost": 14.0
+      }
+    },
+    {
+      "step_index": 3,
+      "time": 4.0,
+      "timestamp": "03:00",
+      "state_before": {
+        "time": 3.0,
+        "step_index": 3,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 4.0,
+        "step_index": 4,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-3",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 3,
+        "timestamp": "03:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 10.0
+      }
+    },
+    {
+      "step_index": 4,
+      "time": 5.0,
+      "timestamp": "04:00",
+      "state_before": {
+        "time": 4.0,
+        "step_index": 4,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 5.0,
+        "step_index": 5,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-4",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 4,
+        "timestamp": "04:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 10.0
+      }
+    },
+    {
+      "step_index": 5,
+      "time": 6.0,
+      "timestamp": "05:00",
+      "state_before": {
+        "time": 5.0,
+        "step_index": 5,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 6.0,
+        "step_index": 6,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-5",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 5,
+        "timestamp": "05:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 10.0
+      }
+    },
+    {
+      "step_index": 6,
+      "time": 7.0,
+      "timestamp": "06:00",
+      "state_before": {
+        "time": 6.0,
+        "step_index": 6,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 7.0,
+        "step_index": 7,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.3,
+        "load_power": 150.0,
+        "pv_power": 20.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-6",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 6,
+        "timestamp": "06:00",
+        "wind_power": 100.0,
+        "pv_power": 20.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 9.0
+      }
+    },
+    {
+      "step_index": 7,
+      "time": 8.0,
+      "timestamp": "07:00",
+      "state_before": {
+        "time": 7.0,
+        "step_index": 7,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 8.0,
+        "step_index": 8,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 50.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-7",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 7,
+        "timestamp": "07:00",
+        "wind_power": 100.0,
+        "pv_power": 50.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 0.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 8,
+      "time": 9.0,
+      "timestamp": "08:00",
+      "state_before": {
+        "time": 8.0,
+        "step_index": 8,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 9.0,
+        "step_index": 9,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 80.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-8",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 8,
+        "timestamp": "08:00",
+        "wind_power": 100.0,
+        "pv_power": 80.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 30.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 9,
+      "time": 10.0,
+      "timestamp": "09:00",
+      "state_before": {
+        "time": 9.0,
+        "step_index": 9,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 10.0,
+        "step_index": 10,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 100.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-9",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 9,
+        "timestamp": "09:00",
+        "wind_power": 100.0,
+        "pv_power": 100.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 50.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 10,
+      "time": 11.0,
+      "timestamp": "10:00",
+      "state_before": {
+        "time": 10.0,
+        "step_index": 10,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 11.0,
+        "step_index": 11,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.45,
+        "load_power": 150.0,
+        "pv_power": 100.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-10",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 10,
+        "timestamp": "10:00",
+        "wind_power": 100.0,
+        "pv_power": 100.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 50.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 11,
+      "time": 12.0,
+      "timestamp": "11:00",
+      "state_before": {
+        "time": 11.0,
+        "step_index": 11,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 12.0,
+        "step_index": 12,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 80.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-11",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 11,
+        "timestamp": "11:00",
+        "wind_power": 100.0,
+        "pv_power": 80.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 30.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 12,
+      "time": 13.0,
+      "timestamp": "12:00",
+      "state_before": {
+        "time": 12.0,
+        "step_index": 12,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 13.0,
+        "step_index": 13,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 60.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-12",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 12,
+        "timestamp": "12:00",
+        "wind_power": 100.0,
+        "pv_power": 60.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 10.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 13,
+      "time": 14.0,
+      "timestamp": "13:00",
+      "state_before": {
+        "time": 13.0,
+        "step_index": 13,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 14.0,
+        "step_index": 14,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 40.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-13",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 13,
+        "timestamp": "13:00",
+        "wind_power": 100.0,
+        "pv_power": 40.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 10.0,
+        "curtailment": 0.0,
+        "cost": 3.5
+      }
+    },
+    {
+      "step_index": 14,
+      "time": 15.0,
+      "timestamp": "14:00",
+      "state_before": {
+        "time": 14.0,
+        "step_index": 14,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 15.0,
+        "step_index": 15,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 20.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-14",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 14,
+        "timestamp": "14:00",
+        "wind_power": 100.0,
+        "pv_power": 20.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 12.0
+      }
+    },
+    {
+      "step_index": 15,
+      "time": 16.0,
+      "timestamp": "15:00",
+      "state_before": {
+        "time": 15.0,
+        "step_index": 15,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 16.0,
+        "step_index": 16,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-15",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 15,
+        "timestamp": "15:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 25.0
+      }
+    },
+    {
+      "step_index": 16,
+      "time": 17.0,
+      "timestamp": "16:00",
+      "state_before": {
+        "time": 16.0,
+        "step_index": 16,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 17.0,
+        "step_index": 17,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.7,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-16",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 16,
+        "timestamp": "16:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 35.0
+      }
+    },
+    {
+      "step_index": 17,
+      "time": 18.0,
+      "timestamp": "17:00",
+      "state_before": {
+        "time": 17.0,
+        "step_index": 17,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 18.0,
+        "step_index": 18,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.9,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-17",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 17,
+        "timestamp": "17:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 45.0
+      }
+    },
+    {
+      "step_index": 18,
+      "time": 19.0,
+      "timestamp": "18:00",
+      "state_before": {
+        "time": 18.0,
+        "step_index": 18,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 19.0,
+        "step_index": 19,
+        "values": {
+          "state-battery_soc": 67.97368421052632
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 1.1,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-18",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 20.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 18,
+        "timestamp": "18:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 67.97368421052632,
+        "battery_charge": 0.0,
+        "battery_discharge": 20.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 33.0
+      }
+    },
+    {
+      "step_index": 19,
+      "time": 20.0,
+      "timestamp": "19:00",
+      "state_before": {
+        "time": 19.0,
+        "step_index": 19,
+        "values": {
+          "state-battery_soc": 67.97368421052632
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 20.0,
+        "step_index": 20,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 1.0,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-19",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 20.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 19,
+        "timestamp": "19:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 20.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 30.0
+      }
+    },
+    {
+      "step_index": 20,
+      "time": 21.0,
+      "timestamp": "20:00",
+      "state_before": {
+        "time": 20.0,
+        "step_index": 20,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 21.0,
+        "step_index": 21,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.8,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-20",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 20,
+        "timestamp": "20:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 40.0
+      }
+    },
+    {
+      "step_index": 21,
+      "time": 22.0,
+      "timestamp": "21:00",
+      "state_before": {
+        "time": 21.0,
+        "step_index": 21,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 22.0,
+        "step_index": 22,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-21",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 21,
+        "timestamp": "21:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 25.0
+      }
+    },
+    {
+      "step_index": 22,
+      "time": 23.0,
+      "timestamp": "22:00",
+      "state_before": {
+        "time": 22.0,
+        "step_index": 22,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 23.0,
+        "step_index": 23,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-22",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 22,
+        "timestamp": "22:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 17.5
+      }
+    },
+    {
+      "step_index": 23,
+      "time": 24.0,
+      "timestamp": "23:00",
+      "state_before": {
+        "time": 23.0,
+        "step_index": 23,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "state_after": {
+        "time": 24.0,
+        "step_index": 24,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "inputs": {
+        "electricity_price": 0.25,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "action": {
+        "action_id": "dispatch-23",
+        "name": "fixed_demo_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 0.0,
+          "battery_discharge": 0.0
+        },
+        "metadata": {}
+      },
+      "constraint_evaluation": {
+        "valid": true,
+        "violations": [],
+        "checked_constraints": [
+          "battery_soc",
+          "charge_power",
+          "discharge_power",
+          "grid_power",
+          "power_balance"
+        ]
+      },
+      "events": [],
+      "metrics": {
+        "step_index": 23,
+        "timestamp": "23:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 12.5
+      }
+    }
+  ],
+  "trace": [
+    {
+      "step_index": 0,
+      "state": {
+        "time": 0.0,
+        "step_index": 0,
+        "values": {
+          "state-battery_soc": 50
+        },
+        "metadata": {
+          "status": "initialized"
+        }
+      },
+      "actions": [],
+      "inputs": {},
+      "events": [],
+      "constraint_violations": [],
+      "metrics": null
+    },
+    {
+      "step_index": 0,
+      "state": {
+        "time": 1.0,
+        "step_index": 1,
+        "values": {
+          "state-battery_soc": 59.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-0",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 20.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 0,
+        "timestamp": "00:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 59.5,
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0,
+        "grid_import": 70.0,
+        "curtailment": 0.0,
+        "cost": 14.0
+      }
+    },
+    {
+      "step_index": 1,
+      "state": {
+        "time": 2.0,
+        "step_index": 2,
+        "values": {
+          "state-battery_soc": 69.0
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-1",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 20.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 1,
+        "timestamp": "01:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 69.0,
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0,
+        "grid_import": 70.0,
+        "curtailment": 0.0,
+        "cost": 14.0
+      }
+    },
+    {
+      "step_index": 2,
+      "state": {
+        "time": 3.0,
+        "step_index": 3,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-2",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 20.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 2,
+        "timestamp": "02:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 20.0,
+        "battery_discharge": 0.0,
+        "grid_import": 70.0,
+        "curtailment": 0.0,
+        "cost": 14.0
+      }
+    },
+    {
+      "step_index": 3,
+      "state": {
+        "time": 4.0,
+        "step_index": 4,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-3",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 3,
+        "timestamp": "03:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 10.0
+      }
+    },
+    {
+      "step_index": 4,
+      "state": {
+        "time": 5.0,
+        "step_index": 5,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-4",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 4,
+        "timestamp": "04:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 10.0
+      }
+    },
+    {
+      "step_index": 5,
+      "state": {
+        "time": 6.0,
+        "step_index": 6,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-5",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 5,
+        "timestamp": "05:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 10.0
+      }
+    },
+    {
+      "step_index": 6,
+      "state": {
+        "time": 7.0,
+        "step_index": 7,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-6",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.3,
+        "load_power": 150.0,
+        "pv_power": 20.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 6,
+        "timestamp": "06:00",
+        "wind_power": 100.0,
+        "pv_power": 20.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 9.0
+      }
+    },
+    {
+      "step_index": 7,
+      "state": {
+        "time": 8.0,
+        "step_index": 8,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-7",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 50.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 7,
+        "timestamp": "07:00",
+        "wind_power": 100.0,
+        "pv_power": 50.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 0.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 8,
+      "state": {
+        "time": 9.0,
+        "step_index": 9,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-8",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 80.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 8,
+        "timestamp": "08:00",
+        "wind_power": 100.0,
+        "pv_power": 80.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 30.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 9,
+      "state": {
+        "time": 10.0,
+        "step_index": 10,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-9",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 100.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 9,
+        "timestamp": "09:00",
+        "wind_power": 100.0,
+        "pv_power": 100.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 50.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 10,
+      "state": {
+        "time": 11.0,
+        "step_index": 11,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-10",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.45,
+        "load_power": 150.0,
+        "pv_power": 100.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 10,
+        "timestamp": "10:00",
+        "wind_power": 100.0,
+        "pv_power": 100.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 50.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 11,
+      "state": {
+        "time": 12.0,
+        "step_index": 12,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-11",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 80.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 11,
+        "timestamp": "11:00",
+        "wind_power": 100.0,
+        "pv_power": 80.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 30.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 12,
+      "state": {
+        "time": 13.0,
+        "step_index": 13,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-12",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 60.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 12,
+        "timestamp": "12:00",
+        "wind_power": 100.0,
+        "pv_power": 60.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 0.0,
+        "curtailment": 10.0,
+        "cost": 0.0
+      }
+    },
+    {
+      "step_index": 13,
+      "state": {
+        "time": 14.0,
+        "step_index": 14,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-13",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 40.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 13,
+        "timestamp": "13:00",
+        "wind_power": 100.0,
+        "pv_power": 40.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 10.0,
+        "curtailment": 0.0,
+        "cost": 3.5
+      }
+    },
+    {
+      "step_index": 14,
+      "state": {
+        "time": 15.0,
+        "step_index": 15,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-14",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 20.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 14,
+        "timestamp": "14:00",
+        "wind_power": 100.0,
+        "pv_power": 20.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 12.0
+      }
+    },
+    {
+      "step_index": 15,
+      "state": {
+        "time": 16.0,
+        "step_index": 16,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-15",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 15,
+        "timestamp": "15:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 25.0
+      }
+    },
+    {
+      "step_index": 16,
+      "state": {
+        "time": 17.0,
+        "step_index": 17,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-16",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.7,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 16,
+        "timestamp": "16:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 35.0
+      }
+    },
+    {
+      "step_index": 17,
+      "state": {
+        "time": 18.0,
+        "step_index": 18,
+        "values": {
+          "state-battery_soc": 78.5
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-17",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.9,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 17,
+        "timestamp": "17:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 78.5,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 45.0
+      }
+    },
+    {
+      "step_index": 18,
+      "state": {
+        "time": 19.0,
+        "step_index": 19,
+        "values": {
+          "state-battery_soc": 67.97368421052632
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-18",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 20.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 1.1,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 18,
+        "timestamp": "18:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 67.97368421052632,
+        "battery_charge": 0.0,
+        "battery_discharge": 20.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 33.0
+      }
+    },
+    {
+      "step_index": 19,
+      "state": {
+        "time": 20.0,
+        "step_index": 20,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-19",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 20.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 1.0,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 19,
+        "timestamp": "19:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 20.0,
+        "grid_import": 30.0,
+        "curtailment": 0.0,
+        "cost": 30.0
+      }
+    },
+    {
+      "step_index": 20,
+      "state": {
+        "time": 21.0,
+        "step_index": 21,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-20",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.8,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 20,
+        "timestamp": "20:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 40.0
+      }
+    },
+    {
+      "step_index": 21,
+      "state": {
+        "time": 22.0,
+        "step_index": 22,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-21",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 21,
+        "timestamp": "21:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 25.0
+      }
+    },
+    {
+      "step_index": 22,
+      "state": {
+        "time": 23.0,
+        "step_index": 23,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-22",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 22,
+        "timestamp": "22:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 17.5
+      }
+    },
+    {
+      "step_index": 23,
+      "state": {
+        "time": 24.0,
+        "step_index": 24,
+        "values": {
+          "state-battery_soc": 57.44736842105263
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      "actions": [
+        {
+          "action_id": "dispatch-23",
+          "name": "fixed_demo_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 0.0,
+            "battery_discharge": 0.0
+          },
+          "metadata": {}
+        }
+      ],
+      "inputs": {
+        "electricity_price": 0.25,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      "events": [],
+      "constraint_violations": [],
+      "metrics": {
+        "step_index": 23,
+        "timestamp": "23:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 57.44736842105263,
+        "battery_charge": 0.0,
+        "battery_discharge": 0.0,
+        "grid_import": 50.0,
+        "curtailment": 0.0,
+        "cost": 12.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$defs": {
+    "ScenarioSource": {
+      "additionalProperties": false,
+      "properties": {
+        "document": {
+          "title": "Document",
+          "type": "string"
+        },
+        "table_id": {
+          "title": "Table Id",
+          "type": "string"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        }
+      },
+      "required": [
+        "document",
+        "table_id"
+      ],
+      "title": "ScenarioSource",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "time": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Time",
+      "type": "array"
+    },
+    "variables": {
+      "additionalProperties": {
+        "items": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "type": "array"
+      },
+      "title": "Variables",
+      "type": "object"
+    },
+    "units": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Units",
+      "type": "object"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    },
+    "source": {
+      "$ref": "#/$defs/ScenarioSource"
+    }
+  },
+  "required": [
+    "scenario_id",
+    "time",
+    "variables",
+    "source"
+  ],
+  "title": "ScenarioData",
+  "type": "object"
+}

@@ -1,0 +1,300 @@
+{
+  "$defs": {
+    "BindingValidationSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "missing_inputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Inputs",
+          "type": "array"
+        },
+        "unit_mismatches": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unit Mismatches",
+          "type": "array"
+        },
+        "time_mismatch": {
+          "default": false,
+          "title": "Time Mismatch",
+          "type": "boolean"
+        },
+        "semantic_uncertain": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Semantic Uncertain",
+          "type": "array"
+        },
+        "invalid_inputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Invalid Inputs",
+          "type": "array"
+        }
+      },
+      "title": "BindingValidationSummary",
+      "type": "object"
+    },
+    "ScenarioData": {
+      "additionalProperties": false,
+      "properties": {
+        "scenario_id": {
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "time": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Time",
+          "type": "array"
+        },
+        "variables": {
+          "additionalProperties": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "array"
+          },
+          "title": "Variables",
+          "type": "object"
+        },
+        "units": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Units",
+          "type": "object"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "title": "Metadata",
+          "type": "object"
+        },
+        "source": {
+          "$ref": "#/$defs/ScenarioSource"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "time",
+        "variables",
+        "source"
+      ],
+      "title": "ScenarioData",
+      "type": "object"
+    },
+    "ScenarioSource": {
+      "additionalProperties": false,
+      "properties": {
+        "document": {
+          "title": "Document",
+          "type": "string"
+        },
+        "table_id": {
+          "title": "Table Id",
+          "type": "string"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        }
+      },
+      "required": [
+        "document",
+        "table_id"
+      ],
+      "title": "ScenarioSource",
+      "type": "object"
+    },
+    "TimeAlignment": {
+      "additionalProperties": false,
+      "properties": {
+        "source_step": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Step"
+        },
+        "target_step": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Step"
+        },
+        "conversion": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conversion"
+        }
+      },
+      "title": "TimeAlignment",
+      "type": "object"
+    },
+    "UnitAlignment": {
+      "additionalProperties": false,
+      "properties": {
+        "source_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Unit"
+        },
+        "target_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Unit"
+        },
+        "conversion": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conversion"
+        },
+        "factor": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Factor"
+        }
+      },
+      "title": "UnitAlignment",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "world_model_ir_id": {
+      "title": "World Model Ir Id",
+      "type": "string"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "scenario_data": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ScenarioData"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "status": {
+      "default": "READY",
+      "enum": [
+        "READY",
+        "NEED_INPUT",
+        "INVALID"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "variable_mapping": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Variable Mapping",
+      "type": "object"
+    },
+    "unit_mapping": {
+      "additionalProperties": {
+        "$ref": "#/$defs/UnitAlignment"
+      },
+      "title": "Unit Mapping",
+      "type": "object"
+    },
+    "time_mapping": {
+      "$ref": "#/$defs/TimeAlignment"
+    },
+    "validation_summary": {
+      "$ref": "#/$defs/BindingValidationSummary"
+    }
+  },
+  "required": [
+    "world_model_ir_id",
+    "scenario_id"
+  ],
+  "title": "ScenarioInputBinding",
+  "type": "object"
+}

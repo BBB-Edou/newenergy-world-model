@@ -30,7 +30,7 @@ def test_world_model_validation_rejects_missing_owner() -> None:
     assert report.valid is False
     assert any(issue.code == "attribute.owner_missing" for issue in report.issues)
 
-def test_world_model_has_exactly_ten_top_level_sections() -> None:
+def test_world_model_has_formal_contract_section() -> None:
     assert set(_valid_model().model_dump()) == {
         "metadata",
         "entities",
@@ -42,4 +42,5 @@ def test_world_model_has_exactly_ten_top_level_sections() -> None:
         "constraints",
         "objectives",
         "interfaces",
+        "scenario_input_contract",
     }

@@ -1,0 +1,4488 @@
+{
+  "result_id": "optimization-result",
+  "problem_id": "l6-24h-dispatch",
+  "status": "optimal",
+  "solver_name": "CLARABEL",
+  "feasible": true,
+  "objective_value": 240.40000001901672,
+  "variable_values": {
+    "soc": [
+      50.0,
+      47.953023650836776,
+      45.8320874850341,
+      43.609498203297896,
+      41.244651518957504,
+      38.67471798253348,
+      35.789473688744486,
+      20.000000004850104,
+      20.00000000317285,
+      32.44007929051087,
+      53.37554544583757,
+      74.32392129641886,
+      86.795209671356,
+      89.99999999901692,
+      89.99999999784549,
+      89.99999999874944,
+      89.99999999937808,
+      89.99999999876985,
+      72.63157894532004,
+      46.31578947342796,
+      20.000000003051948,
+      20.000000000439524,
+      20.00000000086614,
+      20.00000000123974,
+      20.000000000509296
+    ]
+  },
+  "decision_variables": {
+    "battery_charge": [
+      4.794017321240023e-9,
+      6.283697947490465e-9,
+      8.031477692614559e-9,
+      9.6542244360769e-9,
+      1.0882063604738332e-8,
+      1.1569041697177279e-8,
+      1.1066400994158128e-8,
+      2.6719128422612478e-8,
+      35.17503962171694,
+      46.93968944100867,
+      46.96079839280637,
+      35.333234815671105,
+      20.18051500546785,
+      1.1096658963038722e-8,
+      1.193451346887087e-8,
+      9.735184177220988e-9,
+      6.439887219884681e-9,
+      2.6561457421082987e-9,
+      1.3021988968938944e-9,
+      1.7977507972776561e-9,
+      4.5303802006530784e-9,
+      9.531223210885198e-9,
+      1.274183165620634e-8,
+      1.6332608737472897e-8
+    ],
+    "battery_discharge": [
+      3.889255067736724,
+      4.029778720696117,
+      4.222919642547202,
+      4.493208708959676,
+      4.882873729026694,
+      5.481964168640157,
+      30.000000009386756,
+      2.7300791033576453e-8,
+      8.109322612657287,
+      2.585684025389602,
+      2.580206433403304,
+      8.192796508762575,
+      12.123813169879,
+      1.2240431901334508e-8,
+      9.053416534524326e-9,
+      7.59157278284131e-9,
+      6.967618921665813e-9,
+      33.000000003951826,
+      49.999999997770175,
+      49.99999999533689,
+      9.05227139134303e-9,
+      7.791355823793353e-9,
+      1.078966334320981e-8,
+      1.6128025718274174e-8
+    ],
+    "grid_import": [
+      46.110744938324444,
+      45.97022128686169,
+      45.77708036676429,
+      45.50679130198118,
+      45.11712628315131,
+      44.51803584423985,
+      3.0752651565015064e-9,
+      1.2313820803724692e-9,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.1842588057767416e-9,
+      9.999999999714758,
+      30.00000000359333,
+      50.000000002694655,
+      49.99999999986797,
+      16.99999999901874,
+      3.810834530590546e-9,
+      6.756217409131092e-9,
+      49.99999999582381,
+      50.00000000228012,
+      50.00000000270442,
+      50.000000001236714
+    ],
+    "curtailment": [
+      1.267145329991597e-9,
+      1.274108268756415e-9,
+      1.280021746780134e-9,
+      1.2866344588132607e-9,
+      1.2959410552495207e-9,
+      1.3109658769575386e-9,
+      1.3956241082712203e-9,
+      1.8130446573749724e-9,
+      2.9342829915738617,
+      5.645994584961998,
+      5.619408041234742,
+      2.859561693881396,
+      1.9432981655954065,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0321298384291664e-9
+    ],
+    "battery_soc": [
+      50.0,
+      47.953023650836776,
+      45.8320874850341,
+      43.609498203297896,
+      41.244651518957504,
+      38.67471798253348,
+      35.789473688744486,
+      20.000000004850104,
+      20.00000000317285,
+      32.44007929051087,
+      53.37554544583757,
+      74.32392129641886,
+      86.795209671356,
+      89.99999999901692,
+      89.99999999784549,
+      89.99999999874944,
+      89.99999999937808,
+      89.99999999876985,
+      72.63157894532004,
+      46.31578947342796,
+      20.000000003051948,
+      20.000000000439524,
+      20.00000000086614,
+      20.00000000123974,
+      20.000000000509296
+    ]
+  },
+  "action_sequence": [
+    {
+      "action_id": "optimal-0",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 4.794017321240023e-9,
+        "battery_discharge": 3.889255067736724,
+        "grid_import": 46.110744938324444
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-1",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 6.283697947490465e-9,
+        "battery_discharge": 4.029778720696117,
+        "grid_import": 45.97022128686169
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-2",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 8.031477692614559e-9,
+        "battery_discharge": 4.222919642547202,
+        "grid_import": 45.77708036676429
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-3",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 9.6542244360769e-9,
+        "battery_discharge": 4.493208708959676,
+        "grid_import": 45.50679130198118
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-4",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.0882063604738332e-8,
+        "battery_discharge": 4.882873729026694,
+        "grid_import": 45.11712628315131
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-5",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.1569041697177279e-8,
+        "battery_discharge": 5.481964168640157,
+        "grid_import": 44.51803584423985
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-6",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.1066400994158128e-8,
+        "battery_discharge": 30.000000009386756,
+        "grid_import": 3.0752651565015064e-9
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-7",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 2.6719128422612478e-8,
+        "battery_discharge": 2.7300791033576453e-8,
+        "grid_import": 1.2313820803724692e-9
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-8",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 35.17503962171694,
+        "battery_discharge": 8.109322612657287,
+        "grid_import": 6.335194851958927e-10
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-9",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 46.93968944100867,
+        "battery_discharge": 2.585684025389602,
+        "grid_import": 5.810663559710395e-10
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-10",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 46.96079839280637,
+        "battery_discharge": 2.580206433403304,
+        "grid_import": 6.3780734511107e-10
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-11",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 35.333234815671105,
+        "battery_discharge": 8.192796508762575,
+        "grid_import": 7.899314685103161e-10
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-12",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 20.18051500546785,
+        "battery_discharge": 12.123813169879,
+        "grid_import": 1.1842588057767416e-9
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-13",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.1096658963038722e-8,
+        "battery_discharge": 1.2240431901334508e-8,
+        "grid_import": 9.999999999714758
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-14",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.193451346887087e-8,
+        "battery_discharge": 9.053416534524326e-9,
+        "grid_import": 30.00000000359333
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-15",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 9.735184177220988e-9,
+        "battery_discharge": 7.59157278284131e-9,
+        "grid_import": 50.000000002694655
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-16",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 6.439887219884681e-9,
+        "battery_discharge": 6.967618921665813e-9,
+        "grid_import": 49.99999999986797
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-17",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 2.6561457421082987e-9,
+        "battery_discharge": 33.000000003951826,
+        "grid_import": 16.99999999901874
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-18",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.3021988968938944e-9,
+        "battery_discharge": 49.999999997770175,
+        "grid_import": 3.810834530590546e-9
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-19",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.7977507972776561e-9,
+        "battery_discharge": 49.99999999533689,
+        "grid_import": 6.756217409131092e-9
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-20",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 4.5303802006530784e-9,
+        "battery_discharge": 9.05227139134303e-9,
+        "grid_import": 49.99999999582381
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-21",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 9.531223210885198e-9,
+        "battery_discharge": 7.791355823793353e-9,
+        "grid_import": 50.00000000228012
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-22",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.274183165620634e-8,
+        "battery_discharge": 1.078966334320981e-8,
+        "grid_import": 50.00000000270442
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    },
+    {
+      "action_id": "optimal-23",
+      "name": "cvxpy_optimal_dispatch",
+      "target_id": null,
+      "values": {
+        "battery_charge": 1.6332608737472897e-8,
+        "battery_discharge": 1.6128025718274174e-8,
+        "grid_import": 50.000000001236714
+      },
+      "metadata": {
+        "source": "CVXPYOptimizer"
+      }
+    }
+  ],
+  "constraint_summary": {
+    "total": 54,
+    "satisfied": 54,
+    "violated": 0,
+    "details": []
+  },
+  "solver_info": {
+    "solver_name": "CLARABEL",
+    "status": "optimal",
+    "message": "optimal",
+    "iterations": null,
+    "metadata": {
+      "cvxpy_status": "optimal"
+    }
+  },
+  "simulation_result": {
+    "simulation_id": "world-model-ir-renewable_energy_24h-simulation",
+    "model_id": "world-model-ir",
+    "status": "COMPLETED",
+    "metadata": {
+      "scenario_id": "renewable_energy_24h",
+      "binding_status": "READY",
+      "steps": 24,
+      "step_size": 1.0,
+      "time_unit": "h"
+    },
+    "initial_state": {
+      "time": 0.0,
+      "step_index": 0,
+      "values": {
+        "state-battery_soc": 50
+      },
+      "metadata": {
+        "status": "initialized"
+      }
+    },
+    "final_state": {
+      "time": 24.0,
+      "step_index": 24,
+      "values": {
+        "state-battery_soc": 20.00000000050932
+      },
+      "metadata": {
+        "status": "running"
+      }
+    },
+    "states": [
+      {
+        "time": 0.0,
+        "step_index": 0,
+        "values": {
+          "state-battery_soc": 50
+        },
+        "metadata": {
+          "status": "initialized"
+        }
+      },
+      {
+        "time": 1.0,
+        "step_index": 1,
+        "values": {
+          "state-battery_soc": 47.95302365083678
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 2.0,
+        "step_index": 2,
+        "values": {
+          "state-battery_soc": 45.83208748503411
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 3.0,
+        "step_index": 3,
+        "values": {
+          "state-battery_soc": 43.6094982032979
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 4.0,
+        "step_index": 4,
+        "values": {
+          "state-battery_soc": 41.24465151895752
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 5.0,
+        "step_index": 5,
+        "values": {
+          "state-battery_soc": 38.6747179825335
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 6.0,
+        "step_index": 6,
+        "values": {
+          "state-battery_soc": 35.7894736887445
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 7.0,
+        "step_index": 7,
+        "values": {
+          "state-battery_soc": 20.000000004850115
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 8.0,
+        "step_index": 8,
+        "values": {
+          "state-battery_soc": 20.000000003172865
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 9.0,
+        "step_index": 9,
+        "values": {
+          "state-battery_soc": 32.440079290510894
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 10.0,
+        "step_index": 10,
+        "values": {
+          "state-battery_soc": 53.37554544583759
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 11.0,
+        "step_index": 11,
+        "values": {
+          "state-battery_soc": 74.32392129641887
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 12.0,
+        "step_index": 12,
+        "values": {
+          "state-battery_soc": 86.79520967135603
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 13.0,
+        "step_index": 13,
+        "values": {
+          "state-battery_soc": 89.99999999901694
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 14.0,
+        "step_index": 14,
+        "values": {
+          "state-battery_soc": 89.99999999784552
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 15.0,
+        "step_index": 15,
+        "values": {
+          "state-battery_soc": 89.99999999874946
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 16.0,
+        "step_index": 16,
+        "values": {
+          "state-battery_soc": 89.9999999993781
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 17.0,
+        "step_index": 17,
+        "values": {
+          "state-battery_soc": 89.99999999876988
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 18.0,
+        "step_index": 18,
+        "values": {
+          "state-battery_soc": 72.63157894532006
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 19.0,
+        "step_index": 19,
+        "values": {
+          "state-battery_soc": 46.315789473427984
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 20.0,
+        "step_index": 20,
+        "values": {
+          "state-battery_soc": 20.00000000305197
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 21.0,
+        "step_index": 21,
+        "values": {
+          "state-battery_soc": 20.00000000043955
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 22.0,
+        "step_index": 22,
+        "values": {
+          "state-battery_soc": 20.000000000866166
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 23.0,
+        "step_index": 23,
+        "values": {
+          "state-battery_soc": 20.000000001239766
+        },
+        "metadata": {
+          "status": "running"
+        }
+      },
+      {
+        "time": 24.0,
+        "step_index": 24,
+        "values": {
+          "state-battery_soc": 20.00000000050932
+        },
+        "metadata": {
+          "status": "running"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "optimal-0",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 4.794017321240023e-9,
+          "battery_discharge": 3.889255067736724,
+          "grid_import": 46.110744938324444
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-1",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 6.283697947490465e-9,
+          "battery_discharge": 4.029778720696117,
+          "grid_import": 45.97022128686169
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-2",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 8.031477692614559e-9,
+          "battery_discharge": 4.222919642547202,
+          "grid_import": 45.77708036676429
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-3",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 9.6542244360769e-9,
+          "battery_discharge": 4.493208708959676,
+          "grid_import": 45.50679130198118
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-4",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.0882063604738332e-8,
+          "battery_discharge": 4.882873729026694,
+          "grid_import": 45.11712628315131
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-5",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.1569041697177279e-8,
+          "battery_discharge": 5.481964168640157,
+          "grid_import": 44.51803584423985
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-6",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.1066400994158128e-8,
+          "battery_discharge": 30.000000009386756,
+          "grid_import": 3.0752651565015064e-9
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-7",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 2.6719128422612478e-8,
+          "battery_discharge": 2.7300791033576453e-8,
+          "grid_import": 1.2313820803724692e-9
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-8",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 35.17503962171694,
+          "battery_discharge": 8.109322612657287,
+          "grid_import": 6.335194851958927e-10
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-9",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 46.93968944100867,
+          "battery_discharge": 2.585684025389602,
+          "grid_import": 5.810663559710395e-10
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-10",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 46.96079839280637,
+          "battery_discharge": 2.580206433403304,
+          "grid_import": 6.3780734511107e-10
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-11",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 35.333234815671105,
+          "battery_discharge": 8.192796508762575,
+          "grid_import": 7.899314685103161e-10
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-12",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 20.18051500546785,
+          "battery_discharge": 12.123813169879,
+          "grid_import": 1.1842588057767416e-9
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-13",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.1096658963038722e-8,
+          "battery_discharge": 1.2240431901334508e-8,
+          "grid_import": 9.999999999714758
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-14",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.193451346887087e-8,
+          "battery_discharge": 9.053416534524326e-9,
+          "grid_import": 30.00000000359333
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-15",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 9.735184177220988e-9,
+          "battery_discharge": 7.59157278284131e-9,
+          "grid_import": 50.000000002694655
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-16",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 6.439887219884681e-9,
+          "battery_discharge": 6.967618921665813e-9,
+          "grid_import": 49.99999999986797
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-17",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 2.6561457421082987e-9,
+          "battery_discharge": 33.000000003951826,
+          "grid_import": 16.99999999901874
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-18",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.3021988968938944e-9,
+          "battery_discharge": 49.999999997770175,
+          "grid_import": 3.810834530590546e-9
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-19",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.7977507972776561e-9,
+          "battery_discharge": 49.99999999533689,
+          "grid_import": 6.756217409131092e-9
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-20",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 4.5303802006530784e-9,
+          "battery_discharge": 9.05227139134303e-9,
+          "grid_import": 49.99999999582381
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-21",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 9.531223210885198e-9,
+          "battery_discharge": 7.791355823793353e-9,
+          "grid_import": 50.00000000228012
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-22",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.274183165620634e-8,
+          "battery_discharge": 1.078966334320981e-8,
+          "grid_import": 50.00000000270442
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      },
+      {
+        "action_id": "optimal-23",
+        "name": "cvxpy_optimal_dispatch",
+        "target_id": null,
+        "values": {
+          "battery_charge": 1.6332608737472897e-8,
+          "battery_discharge": 1.6128025718274174e-8,
+          "grid_import": 50.000000001236714
+        },
+        "metadata": {
+          "source": "CVXPYOptimizer"
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.2,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.3,
+        "load_power": 150.0,
+        "pv_power": 20.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 50.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 80.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 100.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.45,
+        "load_power": 150.0,
+        "pv_power": 100.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 80.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 60.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 40.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.4,
+        "load_power": 150.0,
+        "pv_power": 20.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.7,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.9,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 1.1,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 1.0,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.8,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.5,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.35,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      },
+      {
+        "electricity_price": 0.25,
+        "load_power": 150.0,
+        "pv_power": 0.0,
+        "wind_power": 100.0
+      }
+    ],
+    "events": [
+      {
+        "event_id": "event-start-0",
+        "event_type": "SimulationStart",
+        "time": 0.0,
+        "step_index": 0,
+        "message": "simulation started",
+        "metadata": {}
+      },
+      {
+        "event_id": "event-end-24",
+        "event_type": "SimulationEnd",
+        "time": 24.0,
+        "step_index": 24,
+        "message": "simulation ended",
+        "metadata": {}
+      }
+    ],
+    "constraint_violations": [],
+    "metrics": [
+      {
+        "name": "total_cost",
+        "value": 240.4000000190167,
+        "unit": "CNY",
+        "metadata": {
+          "available": true
+        }
+      },
+      {
+        "name": "renewable_utilization",
+        "value": 0.9935584591544924,
+        "unit": null,
+        "metadata": {}
+      },
+      {
+        "name": "curtailment",
+        "value": 19.00254549424736,
+        "unit": "kWh",
+        "metadata": {}
+      },
+      {
+        "name": "peak_grid_import",
+        "value": 50.00000000270442,
+        "unit": "kW",
+        "metadata": {}
+      },
+      {
+        "name": "final_soc",
+        "value": 20.00000000050932,
+        "unit": "%",
+        "metadata": {}
+      },
+      {
+        "name": "constraint_violation_count",
+        "value": 0,
+        "unit": null,
+        "metadata": {}
+      }
+    ],
+    "step_metrics": [
+      {
+        "step_index": 0,
+        "timestamp": "00:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 47.95302365083678,
+        "battery_charge": 4.794017321240023e-9,
+        "battery_discharge": 3.889255067736724,
+        "grid_import": 46.110744938324444,
+        "curtailment": 1.2671395884690747e-9,
+        "cost": 9.22214898766489
+      },
+      {
+        "step_index": 1,
+        "timestamp": "01:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 45.83208748503411,
+        "battery_charge": 6.283697947490465e-9,
+        "battery_discharge": 4.029778720696117,
+        "grid_import": 45.97022128686169,
+        "curtailment": 1.2741177591142778e-9,
+        "cost": 9.194044257372338
+      },
+      {
+        "step_index": 2,
+        "timestamp": "02:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 43.6094982032979,
+        "battery_charge": 8.031477692614559e-9,
+        "battery_discharge": 4.222919642547202,
+        "grid_import": 45.77708036676429,
+        "curtailment": 1.280014329264972e-9,
+        "cost": 9.155416073352859
+      },
+      {
+        "step_index": 3,
+        "timestamp": "03:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 41.24465151895752,
+        "battery_charge": 9.6542244360769e-9,
+        "battery_discharge": 4.493208708959676,
+        "grid_import": 45.50679130198118,
+        "curtailment": 1.2866557657382614e-9,
+        "cost": 9.101358260396237
+      },
+      {
+        "step_index": 4,
+        "timestamp": "04:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 38.6747179825335,
+        "battery_charge": 1.0882063604738332e-8,
+        "battery_discharge": 4.882873729026694,
+        "grid_import": 45.11712628315131,
+        "curtailment": 1.2959567651634555e-9,
+        "cost": 9.023425256630262
+      },
+      {
+        "step_index": 5,
+        "timestamp": "05:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 35.7894736887445,
+        "battery_charge": 1.1569041697177279e-8,
+        "battery_discharge": 5.481964168640157,
+        "grid_import": 44.51803584423985,
+        "curtailment": 1.3109664739460575e-9,
+        "cost": 8.90360716884797
+      },
+      {
+        "step_index": 6,
+        "timestamp": "06:00",
+        "wind_power": 100.0,
+        "pv_power": 20.0,
+        "load_power": 150.0,
+        "battery_soc": 20.000000004850115,
+        "battery_charge": 1.1066400994158128e-8,
+        "battery_discharge": 30.000000009386756,
+        "grid_import": 3.0752651565015064e-9,
+        "curtailment": 1.3956375180816868e-9,
+        "cost": 9.225795469504518e-10
+      },
+      {
+        "step_index": 7,
+        "timestamp": "07:00",
+        "wind_power": 100.0,
+        "pv_power": 50.0,
+        "load_power": 150.0,
+        "battery_soc": 20.000000003172865,
+        "battery_charge": 2.6719128422612478e-8,
+        "battery_discharge": 2.7300791033576453e-8,
+        "grid_import": 1.2313820803724692e-9,
+        "curtailment": 1.8130277706380794e-9,
+        "cost": 4.925528321489877e-10
+      },
+      {
+        "step_index": 8,
+        "timestamp": "08:00",
+        "wind_power": 100.0,
+        "pv_power": 80.0,
+        "load_power": 150.0,
+        "battery_soc": 32.440079290510894,
+        "battery_charge": 35.17503962171694,
+        "battery_discharge": 8.109322612657287,
+        "grid_import": 6.335194851958927e-10,
+        "curtailment": 2.934282991573859,
+        "cost": 3.1675974259794634e-10
+      },
+      {
+        "step_index": 9,
+        "timestamp": "09:00",
+        "wind_power": 100.0,
+        "pv_power": 100.0,
+        "load_power": 150.0,
+        "battery_soc": 53.37554544583759,
+        "battery_charge": 46.93968944100867,
+        "battery_discharge": 2.585684025389602,
+        "grid_import": 5.810663559710395e-10,
+        "curtailment": 5.645994584961997,
+        "cost": 2.9053317798551973e-10
+      },
+      {
+        "step_index": 10,
+        "timestamp": "10:00",
+        "wind_power": 100.0,
+        "pv_power": 100.0,
+        "load_power": 150.0,
+        "battery_soc": 74.32392129641887,
+        "battery_charge": 46.96079839280637,
+        "battery_discharge": 2.580206433403304,
+        "grid_import": 6.3780734511107e-10,
+        "curtailment": 5.619408041234749,
+        "cost": 2.870133052999815e-10
+      },
+      {
+        "step_index": 11,
+        "timestamp": "11:00",
+        "wind_power": 100.0,
+        "pv_power": 80.0,
+        "load_power": 150.0,
+        "battery_soc": 86.79520967135603,
+        "battery_charge": 35.333234815671105,
+        "battery_discharge": 8.192796508762575,
+        "grid_import": 7.899314685103161e-10,
+        "curtailment": 2.859561693881389,
+        "cost": 3.1597258740412645e-10
+      },
+      {
+        "step_index": 12,
+        "timestamp": "12:00",
+        "wind_power": 100.0,
+        "pv_power": 60.0,
+        "load_power": 150.0,
+        "battery_soc": 89.99999999901694,
+        "battery_charge": 20.18051500546785,
+        "battery_discharge": 12.123813169879,
+        "grid_import": 1.1842588057767416e-9,
+        "curtailment": 1.9432981655954116,
+        "cost": 4.144905820218595e-10
+      },
+      {
+        "step_index": 13,
+        "timestamp": "13:00",
+        "wind_power": 100.0,
+        "pv_power": 40.0,
+        "load_power": 150.0,
+        "battery_soc": 89.99999999784552,
+        "battery_charge": 1.1096658963038722e-8,
+        "battery_discharge": 1.2240431901334508e-8,
+        "grid_import": 9.999999999714758,
+        "curtailment": 8.585352049286981e-10,
+        "cost": 3.499999999900165
+      },
+      {
+        "step_index": 14,
+        "timestamp": "14:00",
+        "wind_power": 100.0,
+        "pv_power": 20.0,
+        "load_power": 150.0,
+        "battery_soc": 89.99999999874946,
+        "battery_charge": 1.193451346887087e-8,
+        "battery_discharge": 9.053416534524326e-9,
+        "grid_import": 30.00000000359333,
+        "curtailment": 7.122377329571401e-10,
+        "cost": 12.000000001437332
+      },
+      {
+        "step_index": 15,
+        "timestamp": "15:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 89.9999999993781,
+        "battery_charge": 9.735184177220988e-9,
+        "battery_discharge": 7.59157278284131e-9,
+        "grid_import": 50.000000002694655,
+        "curtailment": 5.510587912836786e-10,
+        "cost": 25.000000001347328
+      },
+      {
+        "step_index": 16,
+        "timestamp": "16:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 89.99999999876988,
+        "battery_charge": 6.439887219884681e-9,
+        "battery_discharge": 6.967618921665813e-9,
+        "grid_import": 49.99999999986797,
+        "curtailment": 3.956760066746345e-10,
+        "cost": 34.99999999990757
+      },
+      {
+        "step_index": 17,
+        "timestamp": "17:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 72.63157894532006,
+        "battery_charge": 2.6561457421082987e-9,
+        "battery_discharge": 33.000000003951826,
+        "grid_import": 16.99999999901874,
+        "curtailment": 3.144344841386673e-10,
+        "cost": 15.299999999116867
+      },
+      {
+        "step_index": 18,
+        "timestamp": "18:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 46.315789473427984,
+        "battery_charge": 1.3021988968938944e-9,
+        "battery_discharge": 49.999999997770175,
+        "grid_import": 3.810834530590546e-9,
+        "curtailment": 2.7881553359118934e-10,
+        "cost": 4.1919179836496005e-9
+      },
+      {
+        "step_index": 19,
+        "timestamp": "19:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 20.00000000305197,
+        "battery_charge": 1.7977507972776561e-9,
+        "battery_discharge": 49.99999999533689,
+        "grid_import": 6.756217409131092e-9,
+        "curtailment": 2.95365993724447e-10,
+        "cost": 6.756217409131092e-9
+      },
+      {
+        "step_index": 20,
+        "timestamp": "20:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 20.00000000043955,
+        "battery_charge": 4.5303802006530784e-9,
+        "battery_discharge": 9.05227139134303e-9,
+        "grid_import": 49.99999999582381,
+        "curtailment": 3.457051126458939e-10,
+        "cost": 39.99999999665906
+      },
+      {
+        "step_index": 21,
+        "timestamp": "21:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 20.000000000866166,
+        "battery_charge": 9.531223210885198e-9,
+        "battery_discharge": 7.791355823793353e-9,
+        "grid_import": 50.00000000228012,
+        "curtailment": 5.402368994539049e-10,
+        "cost": 25.00000000114006
+      },
+      {
+        "step_index": 22,
+        "timestamp": "22:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 20.000000001239766,
+        "battery_charge": 1.274183165620634e-8,
+        "battery_discharge": 1.078966334320981e-8,
+        "grid_import": 50.00000000270442,
+        "curtailment": 7.522559688703046e-10,
+        "cost": 17.500000000946546
+      },
+      {
+        "step_index": 23,
+        "timestamp": "23:00",
+        "wind_power": 100.0,
+        "pv_power": 0.0,
+        "load_power": 150.0,
+        "battery_soc": 20.00000000050932,
+        "battery_charge": 1.6332608737472897e-8,
+        "battery_discharge": 1.6128025718274174e-8,
+        "grid_import": 50.000000001236714,
+        "curtailment": 1.032117808092748e-9,
+        "cost": 12.500000000309178
+      }
+    ],
+    "steps": [
+      {
+        "step_index": 0,
+        "time": 1.0,
+        "timestamp": "00:00",
+        "state_before": {
+          "time": 0.0,
+          "step_index": 0,
+          "values": {
+            "state-battery_soc": 50
+          },
+          "metadata": {
+            "status": "initialized"
+          }
+        },
+        "state_after": {
+          "time": 1.0,
+          "step_index": 1,
+          "values": {
+            "state-battery_soc": 47.95302365083678
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-0",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 4.794017321240023e-9,
+            "battery_discharge": 3.889255067736724,
+            "grid_import": 46.110744938324444
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 0,
+          "timestamp": "00:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 47.95302365083678,
+          "battery_charge": 4.794017321240023e-9,
+          "battery_discharge": 3.889255067736724,
+          "grid_import": 46.110744938324444,
+          "curtailment": 1.2671395884690747e-9,
+          "cost": 9.22214898766489
+        }
+      },
+      {
+        "step_index": 1,
+        "time": 2.0,
+        "timestamp": "01:00",
+        "state_before": {
+          "time": 1.0,
+          "step_index": 1,
+          "values": {
+            "state-battery_soc": 47.95302365083678
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 2.0,
+          "step_index": 2,
+          "values": {
+            "state-battery_soc": 45.83208748503411
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-1",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 6.283697947490465e-9,
+            "battery_discharge": 4.029778720696117,
+            "grid_import": 45.97022128686169
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 1,
+          "timestamp": "01:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 45.83208748503411,
+          "battery_charge": 6.283697947490465e-9,
+          "battery_discharge": 4.029778720696117,
+          "grid_import": 45.97022128686169,
+          "curtailment": 1.2741177591142778e-9,
+          "cost": 9.194044257372338
+        }
+      },
+      {
+        "step_index": 2,
+        "time": 3.0,
+        "timestamp": "02:00",
+        "state_before": {
+          "time": 2.0,
+          "step_index": 2,
+          "values": {
+            "state-battery_soc": 45.83208748503411
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 3.0,
+          "step_index": 3,
+          "values": {
+            "state-battery_soc": 43.6094982032979
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-2",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 8.031477692614559e-9,
+            "battery_discharge": 4.222919642547202,
+            "grid_import": 45.77708036676429
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 2,
+          "timestamp": "02:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 43.6094982032979,
+          "battery_charge": 8.031477692614559e-9,
+          "battery_discharge": 4.222919642547202,
+          "grid_import": 45.77708036676429,
+          "curtailment": 1.280014329264972e-9,
+          "cost": 9.155416073352859
+        }
+      },
+      {
+        "step_index": 3,
+        "time": 4.0,
+        "timestamp": "03:00",
+        "state_before": {
+          "time": 3.0,
+          "step_index": 3,
+          "values": {
+            "state-battery_soc": 43.6094982032979
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 4.0,
+          "step_index": 4,
+          "values": {
+            "state-battery_soc": 41.24465151895752
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-3",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 9.6542244360769e-9,
+            "battery_discharge": 4.493208708959676,
+            "grid_import": 45.50679130198118
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 3,
+          "timestamp": "03:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 41.24465151895752,
+          "battery_charge": 9.6542244360769e-9,
+          "battery_discharge": 4.493208708959676,
+          "grid_import": 45.50679130198118,
+          "curtailment": 1.2866557657382614e-9,
+          "cost": 9.101358260396237
+        }
+      },
+      {
+        "step_index": 4,
+        "time": 5.0,
+        "timestamp": "04:00",
+        "state_before": {
+          "time": 4.0,
+          "step_index": 4,
+          "values": {
+            "state-battery_soc": 41.24465151895752
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 5.0,
+          "step_index": 5,
+          "values": {
+            "state-battery_soc": 38.6747179825335
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-4",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.0882063604738332e-8,
+            "battery_discharge": 4.882873729026694,
+            "grid_import": 45.11712628315131
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 4,
+          "timestamp": "04:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 38.6747179825335,
+          "battery_charge": 1.0882063604738332e-8,
+          "battery_discharge": 4.882873729026694,
+          "grid_import": 45.11712628315131,
+          "curtailment": 1.2959567651634555e-9,
+          "cost": 9.023425256630262
+        }
+      },
+      {
+        "step_index": 5,
+        "time": 6.0,
+        "timestamp": "05:00",
+        "state_before": {
+          "time": 5.0,
+          "step_index": 5,
+          "values": {
+            "state-battery_soc": 38.6747179825335
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 6.0,
+          "step_index": 6,
+          "values": {
+            "state-battery_soc": 35.7894736887445
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-5",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.1569041697177279e-8,
+            "battery_discharge": 5.481964168640157,
+            "grid_import": 44.51803584423985
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 5,
+          "timestamp": "05:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 35.7894736887445,
+          "battery_charge": 1.1569041697177279e-8,
+          "battery_discharge": 5.481964168640157,
+          "grid_import": 44.51803584423985,
+          "curtailment": 1.3109664739460575e-9,
+          "cost": 8.90360716884797
+        }
+      },
+      {
+        "step_index": 6,
+        "time": 7.0,
+        "timestamp": "06:00",
+        "state_before": {
+          "time": 6.0,
+          "step_index": 6,
+          "values": {
+            "state-battery_soc": 35.7894736887445
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 7.0,
+          "step_index": 7,
+          "values": {
+            "state-battery_soc": 20.000000004850115
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.3,
+          "load_power": 150.0,
+          "pv_power": 20.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-6",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.1066400994158128e-8,
+            "battery_discharge": 30.000000009386756,
+            "grid_import": 3.0752651565015064e-9
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 6,
+          "timestamp": "06:00",
+          "wind_power": 100.0,
+          "pv_power": 20.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000004850115,
+          "battery_charge": 1.1066400994158128e-8,
+          "battery_discharge": 30.000000009386756,
+          "grid_import": 3.0752651565015064e-9,
+          "curtailment": 1.3956375180816868e-9,
+          "cost": 9.225795469504518e-10
+        }
+      },
+      {
+        "step_index": 7,
+        "time": 8.0,
+        "timestamp": "07:00",
+        "state_before": {
+          "time": 7.0,
+          "step_index": 7,
+          "values": {
+            "state-battery_soc": 20.000000004850115
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 8.0,
+          "step_index": 8,
+          "values": {
+            "state-battery_soc": 20.000000003172865
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.4,
+          "load_power": 150.0,
+          "pv_power": 50.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-7",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 2.6719128422612478e-8,
+            "battery_discharge": 2.7300791033576453e-8,
+            "grid_import": 1.2313820803724692e-9
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 7,
+          "timestamp": "07:00",
+          "wind_power": 100.0,
+          "pv_power": 50.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000003172865,
+          "battery_charge": 2.6719128422612478e-8,
+          "battery_discharge": 2.7300791033576453e-8,
+          "grid_import": 1.2313820803724692e-9,
+          "curtailment": 1.8130277706380794e-9,
+          "cost": 4.925528321489877e-10
+        }
+      },
+      {
+        "step_index": 8,
+        "time": 9.0,
+        "timestamp": "08:00",
+        "state_before": {
+          "time": 8.0,
+          "step_index": 8,
+          "values": {
+            "state-battery_soc": 20.000000003172865
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 9.0,
+          "step_index": 9,
+          "values": {
+            "state-battery_soc": 32.440079290510894
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 80.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-8",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 35.17503962171694,
+            "battery_discharge": 8.109322612657287,
+            "grid_import": 6.335194851958927e-10
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 8,
+          "timestamp": "08:00",
+          "wind_power": 100.0,
+          "pv_power": 80.0,
+          "load_power": 150.0,
+          "battery_soc": 32.440079290510894,
+          "battery_charge": 35.17503962171694,
+          "battery_discharge": 8.109322612657287,
+          "grid_import": 6.335194851958927e-10,
+          "curtailment": 2.934282991573859,
+          "cost": 3.1675974259794634e-10
+        }
+      },
+      {
+        "step_index": 9,
+        "time": 10.0,
+        "timestamp": "09:00",
+        "state_before": {
+          "time": 9.0,
+          "step_index": 9,
+          "values": {
+            "state-battery_soc": 32.440079290510894
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 10.0,
+          "step_index": 10,
+          "values": {
+            "state-battery_soc": 53.37554544583759
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 100.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-9",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 46.93968944100867,
+            "battery_discharge": 2.585684025389602,
+            "grid_import": 5.810663559710395e-10
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 9,
+          "timestamp": "09:00",
+          "wind_power": 100.0,
+          "pv_power": 100.0,
+          "load_power": 150.0,
+          "battery_soc": 53.37554544583759,
+          "battery_charge": 46.93968944100867,
+          "battery_discharge": 2.585684025389602,
+          "grid_import": 5.810663559710395e-10,
+          "curtailment": 5.645994584961997,
+          "cost": 2.9053317798551973e-10
+        }
+      },
+      {
+        "step_index": 10,
+        "time": 11.0,
+        "timestamp": "10:00",
+        "state_before": {
+          "time": 10.0,
+          "step_index": 10,
+          "values": {
+            "state-battery_soc": 53.37554544583759
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 11.0,
+          "step_index": 11,
+          "values": {
+            "state-battery_soc": 74.32392129641887
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.45,
+          "load_power": 150.0,
+          "pv_power": 100.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-10",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 46.96079839280637,
+            "battery_discharge": 2.580206433403304,
+            "grid_import": 6.3780734511107e-10
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 10,
+          "timestamp": "10:00",
+          "wind_power": 100.0,
+          "pv_power": 100.0,
+          "load_power": 150.0,
+          "battery_soc": 74.32392129641887,
+          "battery_charge": 46.96079839280637,
+          "battery_discharge": 2.580206433403304,
+          "grid_import": 6.3780734511107e-10,
+          "curtailment": 5.619408041234749,
+          "cost": 2.870133052999815e-10
+        }
+      },
+      {
+        "step_index": 11,
+        "time": 12.0,
+        "timestamp": "11:00",
+        "state_before": {
+          "time": 11.0,
+          "step_index": 11,
+          "values": {
+            "state-battery_soc": 74.32392129641887
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 12.0,
+          "step_index": 12,
+          "values": {
+            "state-battery_soc": 86.79520967135603
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.4,
+          "load_power": 150.0,
+          "pv_power": 80.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-11",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 35.333234815671105,
+            "battery_discharge": 8.192796508762575,
+            "grid_import": 7.899314685103161e-10
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 11,
+          "timestamp": "11:00",
+          "wind_power": 100.0,
+          "pv_power": 80.0,
+          "load_power": 150.0,
+          "battery_soc": 86.79520967135603,
+          "battery_charge": 35.333234815671105,
+          "battery_discharge": 8.192796508762575,
+          "grid_import": 7.899314685103161e-10,
+          "curtailment": 2.859561693881389,
+          "cost": 3.1597258740412645e-10
+        }
+      },
+      {
+        "step_index": 12,
+        "time": 13.0,
+        "timestamp": "12:00",
+        "state_before": {
+          "time": 12.0,
+          "step_index": 12,
+          "values": {
+            "state-battery_soc": 86.79520967135603
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 13.0,
+          "step_index": 13,
+          "values": {
+            "state-battery_soc": 89.99999999901694
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.35,
+          "load_power": 150.0,
+          "pv_power": 60.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-12",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 20.18051500546785,
+            "battery_discharge": 12.123813169879,
+            "grid_import": 1.1842588057767416e-9
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 12,
+          "timestamp": "12:00",
+          "wind_power": 100.0,
+          "pv_power": 60.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999901694,
+          "battery_charge": 20.18051500546785,
+          "battery_discharge": 12.123813169879,
+          "grid_import": 1.1842588057767416e-9,
+          "curtailment": 1.9432981655954116,
+          "cost": 4.144905820218595e-10
+        }
+      },
+      {
+        "step_index": 13,
+        "time": 14.0,
+        "timestamp": "13:00",
+        "state_before": {
+          "time": 13.0,
+          "step_index": 13,
+          "values": {
+            "state-battery_soc": 89.99999999901694
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 14.0,
+          "step_index": 14,
+          "values": {
+            "state-battery_soc": 89.99999999784552
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.35,
+          "load_power": 150.0,
+          "pv_power": 40.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-13",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.1096658963038722e-8,
+            "battery_discharge": 1.2240431901334508e-8,
+            "grid_import": 9.999999999714758
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 13,
+          "timestamp": "13:00",
+          "wind_power": 100.0,
+          "pv_power": 40.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999784552,
+          "battery_charge": 1.1096658963038722e-8,
+          "battery_discharge": 1.2240431901334508e-8,
+          "grid_import": 9.999999999714758,
+          "curtailment": 8.585352049286981e-10,
+          "cost": 3.499999999900165
+        }
+      },
+      {
+        "step_index": 14,
+        "time": 15.0,
+        "timestamp": "14:00",
+        "state_before": {
+          "time": 14.0,
+          "step_index": 14,
+          "values": {
+            "state-battery_soc": 89.99999999784552
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 15.0,
+          "step_index": 15,
+          "values": {
+            "state-battery_soc": 89.99999999874946
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.4,
+          "load_power": 150.0,
+          "pv_power": 20.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-14",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.193451346887087e-8,
+            "battery_discharge": 9.053416534524326e-9,
+            "grid_import": 30.00000000359333
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 14,
+          "timestamp": "14:00",
+          "wind_power": 100.0,
+          "pv_power": 20.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999874946,
+          "battery_charge": 1.193451346887087e-8,
+          "battery_discharge": 9.053416534524326e-9,
+          "grid_import": 30.00000000359333,
+          "curtailment": 7.122377329571401e-10,
+          "cost": 12.000000001437332
+        }
+      },
+      {
+        "step_index": 15,
+        "time": 16.0,
+        "timestamp": "15:00",
+        "state_before": {
+          "time": 15.0,
+          "step_index": 15,
+          "values": {
+            "state-battery_soc": 89.99999999874946
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 16.0,
+          "step_index": 16,
+          "values": {
+            "state-battery_soc": 89.9999999993781
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-15",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 9.735184177220988e-9,
+            "battery_discharge": 7.59157278284131e-9,
+            "grid_import": 50.000000002694655
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 15,
+          "timestamp": "15:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 89.9999999993781,
+          "battery_charge": 9.735184177220988e-9,
+          "battery_discharge": 7.59157278284131e-9,
+          "grid_import": 50.000000002694655,
+          "curtailment": 5.510587912836786e-10,
+          "cost": 25.000000001347328
+        }
+      },
+      {
+        "step_index": 16,
+        "time": 17.0,
+        "timestamp": "16:00",
+        "state_before": {
+          "time": 16.0,
+          "step_index": 16,
+          "values": {
+            "state-battery_soc": 89.9999999993781
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 17.0,
+          "step_index": 17,
+          "values": {
+            "state-battery_soc": 89.99999999876988
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.7,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-16",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 6.439887219884681e-9,
+            "battery_discharge": 6.967618921665813e-9,
+            "grid_import": 49.99999999986797
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 16,
+          "timestamp": "16:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999876988,
+          "battery_charge": 6.439887219884681e-9,
+          "battery_discharge": 6.967618921665813e-9,
+          "grid_import": 49.99999999986797,
+          "curtailment": 3.956760066746345e-10,
+          "cost": 34.99999999990757
+        }
+      },
+      {
+        "step_index": 17,
+        "time": 18.0,
+        "timestamp": "17:00",
+        "state_before": {
+          "time": 17.0,
+          "step_index": 17,
+          "values": {
+            "state-battery_soc": 89.99999999876988
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 18.0,
+          "step_index": 18,
+          "values": {
+            "state-battery_soc": 72.63157894532006
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.9,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-17",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 2.6561457421082987e-9,
+            "battery_discharge": 33.000000003951826,
+            "grid_import": 16.99999999901874
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 17,
+          "timestamp": "17:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 72.63157894532006,
+          "battery_charge": 2.6561457421082987e-9,
+          "battery_discharge": 33.000000003951826,
+          "grid_import": 16.99999999901874,
+          "curtailment": 3.144344841386673e-10,
+          "cost": 15.299999999116867
+        }
+      },
+      {
+        "step_index": 18,
+        "time": 19.0,
+        "timestamp": "18:00",
+        "state_before": {
+          "time": 18.0,
+          "step_index": 18,
+          "values": {
+            "state-battery_soc": 72.63157894532006
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 19.0,
+          "step_index": 19,
+          "values": {
+            "state-battery_soc": 46.315789473427984
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 1.1,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-18",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.3021988968938944e-9,
+            "battery_discharge": 49.999999997770175,
+            "grid_import": 3.810834530590546e-9
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 18,
+          "timestamp": "18:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 46.315789473427984,
+          "battery_charge": 1.3021988968938944e-9,
+          "battery_discharge": 49.999999997770175,
+          "grid_import": 3.810834530590546e-9,
+          "curtailment": 2.7881553359118934e-10,
+          "cost": 4.1919179836496005e-9
+        }
+      },
+      {
+        "step_index": 19,
+        "time": 20.0,
+        "timestamp": "19:00",
+        "state_before": {
+          "time": 19.0,
+          "step_index": 19,
+          "values": {
+            "state-battery_soc": 46.315789473427984
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 20.0,
+          "step_index": 20,
+          "values": {
+            "state-battery_soc": 20.00000000305197
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 1.0,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-19",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.7977507972776561e-9,
+            "battery_discharge": 49.99999999533689,
+            "grid_import": 6.756217409131092e-9
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 19,
+          "timestamp": "19:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.00000000305197,
+          "battery_charge": 1.7977507972776561e-9,
+          "battery_discharge": 49.99999999533689,
+          "grid_import": 6.756217409131092e-9,
+          "curtailment": 2.95365993724447e-10,
+          "cost": 6.756217409131092e-9
+        }
+      },
+      {
+        "step_index": 20,
+        "time": 21.0,
+        "timestamp": "20:00",
+        "state_before": {
+          "time": 20.0,
+          "step_index": 20,
+          "values": {
+            "state-battery_soc": 20.00000000305197
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 21.0,
+          "step_index": 21,
+          "values": {
+            "state-battery_soc": 20.00000000043955
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.8,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-20",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 4.5303802006530784e-9,
+            "battery_discharge": 9.05227139134303e-9,
+            "grid_import": 49.99999999582381
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 20,
+          "timestamp": "20:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.00000000043955,
+          "battery_charge": 4.5303802006530784e-9,
+          "battery_discharge": 9.05227139134303e-9,
+          "grid_import": 49.99999999582381,
+          "curtailment": 3.457051126458939e-10,
+          "cost": 39.99999999665906
+        }
+      },
+      {
+        "step_index": 21,
+        "time": 22.0,
+        "timestamp": "21:00",
+        "state_before": {
+          "time": 21.0,
+          "step_index": 21,
+          "values": {
+            "state-battery_soc": 20.00000000043955
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 22.0,
+          "step_index": 22,
+          "values": {
+            "state-battery_soc": 20.000000000866166
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-21",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 9.531223210885198e-9,
+            "battery_discharge": 7.791355823793353e-9,
+            "grid_import": 50.00000000228012
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 21,
+          "timestamp": "21:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000000866166,
+          "battery_charge": 9.531223210885198e-9,
+          "battery_discharge": 7.791355823793353e-9,
+          "grid_import": 50.00000000228012,
+          "curtailment": 5.402368994539049e-10,
+          "cost": 25.00000000114006
+        }
+      },
+      {
+        "step_index": 22,
+        "time": 23.0,
+        "timestamp": "22:00",
+        "state_before": {
+          "time": 22.0,
+          "step_index": 22,
+          "values": {
+            "state-battery_soc": 20.000000000866166
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 23.0,
+          "step_index": 23,
+          "values": {
+            "state-battery_soc": 20.000000001239766
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.35,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-22",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.274183165620634e-8,
+            "battery_discharge": 1.078966334320981e-8,
+            "grid_import": 50.00000000270442
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 22,
+          "timestamp": "22:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000001239766,
+          "battery_charge": 1.274183165620634e-8,
+          "battery_discharge": 1.078966334320981e-8,
+          "grid_import": 50.00000000270442,
+          "curtailment": 7.522559688703046e-10,
+          "cost": 17.500000000946546
+        }
+      },
+      {
+        "step_index": 23,
+        "time": 24.0,
+        "timestamp": "23:00",
+        "state_before": {
+          "time": 23.0,
+          "step_index": 23,
+          "values": {
+            "state-battery_soc": 20.000000001239766
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "state_after": {
+          "time": 24.0,
+          "step_index": 24,
+          "values": {
+            "state-battery_soc": 20.00000000050932
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "inputs": {
+          "electricity_price": 0.25,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "action": {
+          "action_id": "optimal-23",
+          "name": "cvxpy_optimal_dispatch",
+          "target_id": null,
+          "values": {
+            "battery_charge": 1.6332608737472897e-8,
+            "battery_discharge": 1.6128025718274174e-8,
+            "grid_import": 50.000000001236714
+          },
+          "metadata": {
+            "source": "CVXPYOptimizer"
+          }
+        },
+        "constraint_evaluation": {
+          "valid": true,
+          "violations": [],
+          "checked_constraints": [
+            "battery_soc",
+            "charge_power",
+            "discharge_power",
+            "grid_power",
+            "power_balance"
+          ]
+        },
+        "events": [],
+        "metrics": {
+          "step_index": 23,
+          "timestamp": "23:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.00000000050932,
+          "battery_charge": 1.6332608737472897e-8,
+          "battery_discharge": 1.6128025718274174e-8,
+          "grid_import": 50.000000001236714,
+          "curtailment": 1.032117808092748e-9,
+          "cost": 12.500000000309178
+        }
+      }
+    ],
+    "trace": [
+      {
+        "step_index": 0,
+        "state": {
+          "time": 0.0,
+          "step_index": 0,
+          "values": {
+            "state-battery_soc": 50
+          },
+          "metadata": {
+            "status": "initialized"
+          }
+        },
+        "actions": [],
+        "inputs": {},
+        "events": [],
+        "constraint_violations": [],
+        "metrics": null
+      },
+      {
+        "step_index": 0,
+        "state": {
+          "time": 1.0,
+          "step_index": 1,
+          "values": {
+            "state-battery_soc": 47.95302365083678
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-0",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 4.794017321240023e-9,
+              "battery_discharge": 3.889255067736724,
+              "grid_import": 46.110744938324444
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 0,
+          "timestamp": "00:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 47.95302365083678,
+          "battery_charge": 4.794017321240023e-9,
+          "battery_discharge": 3.889255067736724,
+          "grid_import": 46.110744938324444,
+          "curtailment": 1.2671395884690747e-9,
+          "cost": 9.22214898766489
+        }
+      },
+      {
+        "step_index": 1,
+        "state": {
+          "time": 2.0,
+          "step_index": 2,
+          "values": {
+            "state-battery_soc": 45.83208748503411
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-1",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 6.283697947490465e-9,
+              "battery_discharge": 4.029778720696117,
+              "grid_import": 45.97022128686169
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 1,
+          "timestamp": "01:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 45.83208748503411,
+          "battery_charge": 6.283697947490465e-9,
+          "battery_discharge": 4.029778720696117,
+          "grid_import": 45.97022128686169,
+          "curtailment": 1.2741177591142778e-9,
+          "cost": 9.194044257372338
+        }
+      },
+      {
+        "step_index": 2,
+        "state": {
+          "time": 3.0,
+          "step_index": 3,
+          "values": {
+            "state-battery_soc": 43.6094982032979
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-2",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 8.031477692614559e-9,
+              "battery_discharge": 4.222919642547202,
+              "grid_import": 45.77708036676429
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 2,
+          "timestamp": "02:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 43.6094982032979,
+          "battery_charge": 8.031477692614559e-9,
+          "battery_discharge": 4.222919642547202,
+          "grid_import": 45.77708036676429,
+          "curtailment": 1.280014329264972e-9,
+          "cost": 9.155416073352859
+        }
+      },
+      {
+        "step_index": 3,
+        "state": {
+          "time": 4.0,
+          "step_index": 4,
+          "values": {
+            "state-battery_soc": 41.24465151895752
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-3",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 9.6542244360769e-9,
+              "battery_discharge": 4.493208708959676,
+              "grid_import": 45.50679130198118
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 3,
+          "timestamp": "03:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 41.24465151895752,
+          "battery_charge": 9.6542244360769e-9,
+          "battery_discharge": 4.493208708959676,
+          "grid_import": 45.50679130198118,
+          "curtailment": 1.2866557657382614e-9,
+          "cost": 9.101358260396237
+        }
+      },
+      {
+        "step_index": 4,
+        "state": {
+          "time": 5.0,
+          "step_index": 5,
+          "values": {
+            "state-battery_soc": 38.6747179825335
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-4",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.0882063604738332e-8,
+              "battery_discharge": 4.882873729026694,
+              "grid_import": 45.11712628315131
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 4,
+          "timestamp": "04:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 38.6747179825335,
+          "battery_charge": 1.0882063604738332e-8,
+          "battery_discharge": 4.882873729026694,
+          "grid_import": 45.11712628315131,
+          "curtailment": 1.2959567651634555e-9,
+          "cost": 9.023425256630262
+        }
+      },
+      {
+        "step_index": 5,
+        "state": {
+          "time": 6.0,
+          "step_index": 6,
+          "values": {
+            "state-battery_soc": 35.7894736887445
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-5",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.1569041697177279e-8,
+              "battery_discharge": 5.481964168640157,
+              "grid_import": 44.51803584423985
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.2,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 5,
+          "timestamp": "05:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 35.7894736887445,
+          "battery_charge": 1.1569041697177279e-8,
+          "battery_discharge": 5.481964168640157,
+          "grid_import": 44.51803584423985,
+          "curtailment": 1.3109664739460575e-9,
+          "cost": 8.90360716884797
+        }
+      },
+      {
+        "step_index": 6,
+        "state": {
+          "time": 7.0,
+          "step_index": 7,
+          "values": {
+            "state-battery_soc": 20.000000004850115
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-6",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.1066400994158128e-8,
+              "battery_discharge": 30.000000009386756,
+              "grid_import": 3.0752651565015064e-9
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.3,
+          "load_power": 150.0,
+          "pv_power": 20.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 6,
+          "timestamp": "06:00",
+          "wind_power": 100.0,
+          "pv_power": 20.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000004850115,
+          "battery_charge": 1.1066400994158128e-8,
+          "battery_discharge": 30.000000009386756,
+          "grid_import": 3.0752651565015064e-9,
+          "curtailment": 1.3956375180816868e-9,
+          "cost": 9.225795469504518e-10
+        }
+      },
+      {
+        "step_index": 7,
+        "state": {
+          "time": 8.0,
+          "step_index": 8,
+          "values": {
+            "state-battery_soc": 20.000000003172865
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-7",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 2.6719128422612478e-8,
+              "battery_discharge": 2.7300791033576453e-8,
+              "grid_import": 1.2313820803724692e-9
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.4,
+          "load_power": 150.0,
+          "pv_power": 50.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 7,
+          "timestamp": "07:00",
+          "wind_power": 100.0,
+          "pv_power": 50.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000003172865,
+          "battery_charge": 2.6719128422612478e-8,
+          "battery_discharge": 2.7300791033576453e-8,
+          "grid_import": 1.2313820803724692e-9,
+          "curtailment": 1.8130277706380794e-9,
+          "cost": 4.925528321489877e-10
+        }
+      },
+      {
+        "step_index": 8,
+        "state": {
+          "time": 9.0,
+          "step_index": 9,
+          "values": {
+            "state-battery_soc": 32.440079290510894
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-8",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 35.17503962171694,
+              "battery_discharge": 8.109322612657287,
+              "grid_import": 6.335194851958927e-10
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 80.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 8,
+          "timestamp": "08:00",
+          "wind_power": 100.0,
+          "pv_power": 80.0,
+          "load_power": 150.0,
+          "battery_soc": 32.440079290510894,
+          "battery_charge": 35.17503962171694,
+          "battery_discharge": 8.109322612657287,
+          "grid_import": 6.335194851958927e-10,
+          "curtailment": 2.934282991573859,
+          "cost": 3.1675974259794634e-10
+        }
+      },
+      {
+        "step_index": 9,
+        "state": {
+          "time": 10.0,
+          "step_index": 10,
+          "values": {
+            "state-battery_soc": 53.37554544583759
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-9",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 46.93968944100867,
+              "battery_discharge": 2.585684025389602,
+              "grid_import": 5.810663559710395e-10
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 100.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 9,
+          "timestamp": "09:00",
+          "wind_power": 100.0,
+          "pv_power": 100.0,
+          "load_power": 150.0,
+          "battery_soc": 53.37554544583759,
+          "battery_charge": 46.93968944100867,
+          "battery_discharge": 2.585684025389602,
+          "grid_import": 5.810663559710395e-10,
+          "curtailment": 5.645994584961997,
+          "cost": 2.9053317798551973e-10
+        }
+      },
+      {
+        "step_index": 10,
+        "state": {
+          "time": 11.0,
+          "step_index": 11,
+          "values": {
+            "state-battery_soc": 74.32392129641887
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-10",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 46.96079839280637,
+              "battery_discharge": 2.580206433403304,
+              "grid_import": 6.3780734511107e-10
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.45,
+          "load_power": 150.0,
+          "pv_power": 100.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 10,
+          "timestamp": "10:00",
+          "wind_power": 100.0,
+          "pv_power": 100.0,
+          "load_power": 150.0,
+          "battery_soc": 74.32392129641887,
+          "battery_charge": 46.96079839280637,
+          "battery_discharge": 2.580206433403304,
+          "grid_import": 6.3780734511107e-10,
+          "curtailment": 5.619408041234749,
+          "cost": 2.870133052999815e-10
+        }
+      },
+      {
+        "step_index": 11,
+        "state": {
+          "time": 12.0,
+          "step_index": 12,
+          "values": {
+            "state-battery_soc": 86.79520967135603
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-11",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 35.333234815671105,
+              "battery_discharge": 8.192796508762575,
+              "grid_import": 7.899314685103161e-10
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.4,
+          "load_power": 150.0,
+          "pv_power": 80.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 11,
+          "timestamp": "11:00",
+          "wind_power": 100.0,
+          "pv_power": 80.0,
+          "load_power": 150.0,
+          "battery_soc": 86.79520967135603,
+          "battery_charge": 35.333234815671105,
+          "battery_discharge": 8.192796508762575,
+          "grid_import": 7.899314685103161e-10,
+          "curtailment": 2.859561693881389,
+          "cost": 3.1597258740412645e-10
+        }
+      },
+      {
+        "step_index": 12,
+        "state": {
+          "time": 13.0,
+          "step_index": 13,
+          "values": {
+            "state-battery_soc": 89.99999999901694
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-12",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 20.18051500546785,
+              "battery_discharge": 12.123813169879,
+              "grid_import": 1.1842588057767416e-9
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.35,
+          "load_power": 150.0,
+          "pv_power": 60.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 12,
+          "timestamp": "12:00",
+          "wind_power": 100.0,
+          "pv_power": 60.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999901694,
+          "battery_charge": 20.18051500546785,
+          "battery_discharge": 12.123813169879,
+          "grid_import": 1.1842588057767416e-9,
+          "curtailment": 1.9432981655954116,
+          "cost": 4.144905820218595e-10
+        }
+      },
+      {
+        "step_index": 13,
+        "state": {
+          "time": 14.0,
+          "step_index": 14,
+          "values": {
+            "state-battery_soc": 89.99999999784552
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-13",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.1096658963038722e-8,
+              "battery_discharge": 1.2240431901334508e-8,
+              "grid_import": 9.999999999714758
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.35,
+          "load_power": 150.0,
+          "pv_power": 40.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 13,
+          "timestamp": "13:00",
+          "wind_power": 100.0,
+          "pv_power": 40.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999784552,
+          "battery_charge": 1.1096658963038722e-8,
+          "battery_discharge": 1.2240431901334508e-8,
+          "grid_import": 9.999999999714758,
+          "curtailment": 8.585352049286981e-10,
+          "cost": 3.499999999900165
+        }
+      },
+      {
+        "step_index": 14,
+        "state": {
+          "time": 15.0,
+          "step_index": 15,
+          "values": {
+            "state-battery_soc": 89.99999999874946
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-14",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.193451346887087e-8,
+              "battery_discharge": 9.053416534524326e-9,
+              "grid_import": 30.00000000359333
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.4,
+          "load_power": 150.0,
+          "pv_power": 20.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 14,
+          "timestamp": "14:00",
+          "wind_power": 100.0,
+          "pv_power": 20.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999874946,
+          "battery_charge": 1.193451346887087e-8,
+          "battery_discharge": 9.053416534524326e-9,
+          "grid_import": 30.00000000359333,
+          "curtailment": 7.122377329571401e-10,
+          "cost": 12.000000001437332
+        }
+      },
+      {
+        "step_index": 15,
+        "state": {
+          "time": 16.0,
+          "step_index": 16,
+          "values": {
+            "state-battery_soc": 89.9999999993781
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-15",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 9.735184177220988e-9,
+              "battery_discharge": 7.59157278284131e-9,
+              "grid_import": 50.000000002694655
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 15,
+          "timestamp": "15:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 89.9999999993781,
+          "battery_charge": 9.735184177220988e-9,
+          "battery_discharge": 7.59157278284131e-9,
+          "grid_import": 50.000000002694655,
+          "curtailment": 5.510587912836786e-10,
+          "cost": 25.000000001347328
+        }
+      },
+      {
+        "step_index": 16,
+        "state": {
+          "time": 17.0,
+          "step_index": 17,
+          "values": {
+            "state-battery_soc": 89.99999999876988
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-16",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 6.439887219884681e-9,
+              "battery_discharge": 6.967618921665813e-9,
+              "grid_import": 49.99999999986797
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.7,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 16,
+          "timestamp": "16:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 89.99999999876988,
+          "battery_charge": 6.439887219884681e-9,
+          "battery_discharge": 6.967618921665813e-9,
+          "grid_import": 49.99999999986797,
+          "curtailment": 3.956760066746345e-10,
+          "cost": 34.99999999990757
+        }
+      },
+      {
+        "step_index": 17,
+        "state": {
+          "time": 18.0,
+          "step_index": 18,
+          "values": {
+            "state-battery_soc": 72.63157894532006
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-17",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 2.6561457421082987e-9,
+              "battery_discharge": 33.000000003951826,
+              "grid_import": 16.99999999901874
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.9,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 17,
+          "timestamp": "17:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 72.63157894532006,
+          "battery_charge": 2.6561457421082987e-9,
+          "battery_discharge": 33.000000003951826,
+          "grid_import": 16.99999999901874,
+          "curtailment": 3.144344841386673e-10,
+          "cost": 15.299999999116867
+        }
+      },
+      {
+        "step_index": 18,
+        "state": {
+          "time": 19.0,
+          "step_index": 19,
+          "values": {
+            "state-battery_soc": 46.315789473427984
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-18",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.3021988968938944e-9,
+              "battery_discharge": 49.999999997770175,
+              "grid_import": 3.810834530590546e-9
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 1.1,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 18,
+          "timestamp": "18:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 46.315789473427984,
+          "battery_charge": 1.3021988968938944e-9,
+          "battery_discharge": 49.999999997770175,
+          "grid_import": 3.810834530590546e-9,
+          "curtailment": 2.7881553359118934e-10,
+          "cost": 4.1919179836496005e-9
+        }
+      },
+      {
+        "step_index": 19,
+        "state": {
+          "time": 20.0,
+          "step_index": 20,
+          "values": {
+            "state-battery_soc": 20.00000000305197
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-19",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.7977507972776561e-9,
+              "battery_discharge": 49.99999999533689,
+              "grid_import": 6.756217409131092e-9
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 1.0,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 19,
+          "timestamp": "19:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.00000000305197,
+          "battery_charge": 1.7977507972776561e-9,
+          "battery_discharge": 49.99999999533689,
+          "grid_import": 6.756217409131092e-9,
+          "curtailment": 2.95365993724447e-10,
+          "cost": 6.756217409131092e-9
+        }
+      },
+      {
+        "step_index": 20,
+        "state": {
+          "time": 21.0,
+          "step_index": 21,
+          "values": {
+            "state-battery_soc": 20.00000000043955
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-20",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 4.5303802006530784e-9,
+              "battery_discharge": 9.05227139134303e-9,
+              "grid_import": 49.99999999582381
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.8,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 20,
+          "timestamp": "20:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.00000000043955,
+          "battery_charge": 4.5303802006530784e-9,
+          "battery_discharge": 9.05227139134303e-9,
+          "grid_import": 49.99999999582381,
+          "curtailment": 3.457051126458939e-10,
+          "cost": 39.99999999665906
+        }
+      },
+      {
+        "step_index": 21,
+        "state": {
+          "time": 22.0,
+          "step_index": 22,
+          "values": {
+            "state-battery_soc": 20.000000000866166
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-21",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 9.531223210885198e-9,
+              "battery_discharge": 7.791355823793353e-9,
+              "grid_import": 50.00000000228012
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.5,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 21,
+          "timestamp": "21:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000000866166,
+          "battery_charge": 9.531223210885198e-9,
+          "battery_discharge": 7.791355823793353e-9,
+          "grid_import": 50.00000000228012,
+          "curtailment": 5.402368994539049e-10,
+          "cost": 25.00000000114006
+        }
+      },
+      {
+        "step_index": 22,
+        "state": {
+          "time": 23.0,
+          "step_index": 23,
+          "values": {
+            "state-battery_soc": 20.000000001239766
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-22",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.274183165620634e-8,
+              "battery_discharge": 1.078966334320981e-8,
+              "grid_import": 50.00000000270442
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.35,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 22,
+          "timestamp": "22:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.000000001239766,
+          "battery_charge": 1.274183165620634e-8,
+          "battery_discharge": 1.078966334320981e-8,
+          "grid_import": 50.00000000270442,
+          "curtailment": 7.522559688703046e-10,
+          "cost": 17.500000000946546
+        }
+      },
+      {
+        "step_index": 23,
+        "state": {
+          "time": 24.0,
+          "step_index": 24,
+          "values": {
+            "state-battery_soc": 20.00000000050932
+          },
+          "metadata": {
+            "status": "running"
+          }
+        },
+        "actions": [
+          {
+            "action_id": "optimal-23",
+            "name": "cvxpy_optimal_dispatch",
+            "target_id": null,
+            "values": {
+              "battery_charge": 1.6332608737472897e-8,
+              "battery_discharge": 1.6128025718274174e-8,
+              "grid_import": 50.000000001236714
+            },
+            "metadata": {
+              "source": "CVXPYOptimizer"
+            }
+          }
+        ],
+        "inputs": {
+          "electricity_price": 0.25,
+          "load_power": 150.0,
+          "pv_power": 0.0,
+          "wind_power": 100.0
+        },
+        "events": [],
+        "constraint_violations": [],
+        "metrics": {
+          "step_index": 23,
+          "timestamp": "23:00",
+          "wind_power": 100.0,
+          "pv_power": 0.0,
+          "load_power": 150.0,
+          "battery_soc": 20.00000000050932,
+          "battery_charge": 1.6332608737472897e-8,
+          "battery_discharge": 1.6128025718274174e-8,
+          "grid_import": 50.000000001236714,
+          "curtailment": 1.032117808092748e-9,
+          "cost": 12.500000000309178
+        }
+      }
+    ]
+  },
+  "consistency_report": {
+    "valid": true,
+    "tolerance": 0.00001,
+    "max_abs_error": {
+      "battery_soc": 2.842170943040401e-14,
+      "battery_charge": 0.0,
+      "battery_discharge": 0.0,
+      "grid_import": 0.0,
+      "curtailment": 3.1968354237871825e-14,
+      "total_cost": 2.842170943040401e-14
+    }
+  },
+  "message": "CVXPY optimum executed by the L5 runtime",
+  "metadata": {
+    "scenario_id": "renewable_energy_24h",
+    "horizon": 24,
+    "delta_hours": 1.0
+  }
+}

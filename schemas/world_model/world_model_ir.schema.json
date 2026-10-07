@@ -483,6 +483,145 @@
       "title": "Objective",
       "type": "object"
     },
+    "ScenarioInputContract": {
+      "additionalProperties": false,
+      "properties": {
+        "inputs": {
+          "items": {
+            "$ref": "#/$defs/ScenarioInputSpec"
+          },
+          "title": "Inputs",
+          "type": "array"
+        },
+        "time_requirements": {
+          "$ref": "#/$defs/ScenarioTimeRequirements"
+        }
+      },
+      "title": "ScenarioInputContract",
+      "type": "object"
+    },
+    "ScenarioInputSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "entity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Entity"
+        },
+        "semantic_role": {
+          "default": "unknown",
+          "title": "Semantic Role",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "data_type": {
+          "$ref": "#/$defs/VariableType",
+          "default": "any"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "temporal": {
+          "default": true,
+          "title": "Temporal",
+          "type": "boolean"
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "ScenarioInputSpec",
+      "type": "object"
+    },
+    "ScenarioTimeRequirements": {
+      "additionalProperties": false,
+      "properties": {
+        "step_size": {
+          "default": 1.0,
+          "title": "Step Size",
+          "type": "number"
+        },
+        "horizon": {
+          "default": 1,
+          "title": "Horizon",
+          "type": "integer"
+        },
+        "time_unit": {
+          "default": "abstract",
+          "title": "Time Unit",
+          "type": "string"
+        },
+        "start_time": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Time"
+        },
+        "end_time": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Time"
+        },
+        "timestamp_field": {
+          "default": "timestamp",
+          "title": "Timestamp Field",
+          "type": "string"
+        }
+      },
+      "title": "ScenarioTimeRequirements",
+      "type": "object"
+    },
     "SimulationSettings": {
       "additionalProperties": false,
       "properties": {
@@ -659,6 +798,27 @@
         },
         "simulation": {
           "$ref": "#/$defs/SimulationSettings"
+        },
+        "required_inputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Required Inputs",
+          "type": "array"
+        },
+        "input_units": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Input Units",
+          "type": "object"
         }
       },
       "required": [
@@ -673,6 +833,17 @@
   "properties": {
     "metadata": {
       "$ref": "#/$defs/WorldModelMetadata"
+    },
+    "scenario_input_contract": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ScenarioInputContract"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     },
     "entities": {
       "items": {

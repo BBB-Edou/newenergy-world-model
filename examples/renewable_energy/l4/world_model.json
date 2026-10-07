@@ -23,6 +23,50 @@
       "value_type": "integer"
     },
     {
+      "id": "attribute-battery_charge_efficiency",
+      "name": "charge_efficiency",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_charge_efficiency",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_charge_efficiency",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": null,
+      "value": 0.95,
+      "value_type": "float"
+    },
+    {
+      "id": "attribute-battery_discharge_efficiency",
+      "name": "discharge_efficiency",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_discharge_efficiency",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_discharge_efficiency",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": null,
+      "value": 0.95,
+      "value_type": "float"
+    },
+    {
       "id": "attribute-battery_max_charge_power",
       "name": "max_charge_power",
       "owner": "entity-battery",
@@ -109,6 +153,28 @@
       "unit": "%",
       "value": 20,
       "value_type": "integer"
+    },
+    {
+      "id": "attribute-grid_electricity_price",
+      "name": "electricity_price",
+      "owner": "entity-grid",
+      "trace": [
+        {
+          "source_id": "grid_electricity_price",
+          "source_parent_id": "block-grid",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "grid_electricity_price",
+          "source_parent_id": "grid",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "CNY/kWh",
+      "value": 0.35,
+      "value_type": "float"
     },
     {
       "id": "attribute-grid_max_import_power",
@@ -357,6 +423,8 @@
     {
       "attribute_ids": [
         "attribute-battery_capacity",
+        "attribute-battery_charge_efficiency",
+        "attribute-battery_discharge_efficiency",
         "attribute-battery_max_charge_power",
         "attribute-battery_max_discharge_power",
         "attribute-battery_soc_max",
@@ -392,6 +460,7 @@
     },
     {
       "attribute_ids": [
+        "attribute-grid_electricity_price",
         "attribute-grid_max_import_power"
       ],
       "behavior_ids": [
@@ -657,12 +726,14 @@
     }
   ],
   "metadata": {
+    "input_units": {},
     "ir_id": "world-model-ir",
     "name": "World Model IR",
+    "required_inputs": [],
     "simulation": {
-      "horizon": 1,
+      "horizon": 24,
       "step_size": 1.0,
-      "time_unit": "abstract"
+      "time_unit": "h"
     },
     "source_model": "SysMLModel",
     "source_views": [
@@ -698,6 +769,86 @@
       ]
     }
   ],
+  "scenario_input_contract": {
+    "inputs": [
+      {
+        "aliases": [
+          "attribute-grid_electricity_price",
+          "electricity_price"
+        ],
+        "data_type": "float",
+        "entity": "entity-grid",
+        "name": "electricity_price",
+        "required": true,
+        "semantic_role": "price",
+        "source_ids": [
+          "entity-grid",
+          "attribute-grid_electricity_price"
+        ],
+        "temporal": true,
+        "unit": "CNY/kWh"
+      },
+      {
+        "aliases": [
+          "attribute-load_demand",
+          "demand"
+        ],
+        "data_type": "integer",
+        "entity": "entity-load",
+        "name": "load_power",
+        "required": true,
+        "semantic_role": "power",
+        "source_ids": [
+          "entity-load",
+          "attribute-load_demand"
+        ],
+        "temporal": true,
+        "unit": "kW"
+      },
+      {
+        "aliases": [
+          "attribute-pv_rated_power",
+          "rated_power"
+        ],
+        "data_type": "integer",
+        "entity": "entity-pv",
+        "name": "pv_power",
+        "required": true,
+        "semantic_role": "power",
+        "source_ids": [
+          "entity-pv",
+          "attribute-pv_rated_power"
+        ],
+        "temporal": true,
+        "unit": "kW"
+      },
+      {
+        "aliases": [
+          "attribute-wind_rated_power",
+          "rated_power"
+        ],
+        "data_type": "integer",
+        "entity": "entity-wind",
+        "name": "wind_power",
+        "required": true,
+        "semantic_role": "power",
+        "source_ids": [
+          "entity-wind",
+          "attribute-wind_rated_power"
+        ],
+        "temporal": true,
+        "unit": "kW"
+      }
+    ],
+    "time_requirements": {
+      "end_time": 24.0,
+      "horizon": 24,
+      "start_time": 0.0,
+      "step_size": 1.0,
+      "time_unit": "h",
+      "timestamp_field": "timestamp"
+    }
+  },
   "states": [
     {
       "description": null,

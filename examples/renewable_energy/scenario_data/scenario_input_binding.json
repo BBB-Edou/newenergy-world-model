@@ -1,0 +1,199 @@
+{
+  "world_model_ir_id": "world-model-ir",
+  "scenario_id": "renewable_energy_24h",
+  "scenario_data": {
+    "scenario_id": "renewable_energy_24h",
+    "time": [
+      "00:00",
+      "01:00",
+      "02:00",
+      "03:00",
+      "04:00",
+      "05:00",
+      "06:00",
+      "07:00",
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00",
+      "18:00",
+      "19:00",
+      "20:00",
+      "21:00",
+      "22:00",
+      "23:00"
+    ],
+    "variables": {
+      "wind_power": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "pv_power": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        50.0,
+        80.0,
+        100.0,
+        100.0,
+        80.0,
+        60.0,
+        40.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "load_power": [
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "electricity_price": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.5,
+        0.45,
+        0.4,
+        0.35,
+        0.35,
+        0.4,
+        0.5,
+        0.7,
+        0.9,
+        1.1,
+        1.0,
+        0.8,
+        0.5,
+        0.35,
+        0.25
+      ]
+    },
+    "units": {
+      "wind_power": "kW",
+      "pv_power": "kW",
+      "load_power": "kW",
+      "electricity_price": "CNY/kWh"
+    },
+    "metadata": {
+      "time_step": "1h",
+      "data_class": "example/demo"
+    },
+    "source": {
+      "document": "scenario_24h.json",
+      "table_id": "table_01",
+      "page": 1
+    }
+  },
+  "status": "READY",
+  "variable_mapping": {
+    "electricity_price": "electricity_price",
+    "load_power": "load_power",
+    "pv_power": "pv_power",
+    "wind_power": "wind_power"
+  },
+  "unit_mapping": {
+    "electricity_price": {
+      "source_unit": "CNY/kWh",
+      "target_unit": "CNY/kWh",
+      "conversion": null,
+      "factor": 1.0
+    },
+    "load_power": {
+      "source_unit": "kW",
+      "target_unit": "kW",
+      "conversion": null,
+      "factor": 1.0
+    },
+    "pv_power": {
+      "source_unit": "kW",
+      "target_unit": "kW",
+      "conversion": null,
+      "factor": 1.0
+    },
+    "wind_power": {
+      "source_unit": "kW",
+      "target_unit": "kW",
+      "conversion": null,
+      "factor": 1.0
+    }
+  },
+  "time_mapping": {
+    "source_step": "1h",
+    "target_step": "1h",
+    "conversion": null
+  },
+  "validation_summary": {
+    "missing_inputs": [],
+    "unit_mismatches": [],
+    "time_mismatch": false,
+    "semantic_uncertain": [],
+    "invalid_inputs": []
+  }
+}

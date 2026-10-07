@@ -57,3 +57,51 @@ examples/renewable_energy/l4/world_model.json
 ```
 
 The compiler is deterministic and uses no LLM.
+## L2 ScenarioData demo
+
+```powershell
+python -m l2_modeling.scenario_demo
+```
+
+This produces `examples/renewable_energy/scenario_data/scenario_data.csv` while preserving the existing KnowledgeState -> L3 -> L4 path.
+## L5 24h simulation demo
+
+```powershell
+python -m l5_world_model.demo
+```
+
+Inputs:
+
+```text
+examples/renewable_energy/l4/world_model.json
+examples/renewable_energy/l5/scenario_24h.json
+```
+
+Output:
+
+```text
+examples/renewable_energy/l5/simulation_result.json
+```
+## L6 CVXPY optimization + what-if demo
+
+```powershell
+python -m l6_optimization.demo
+python -m l6_optimization.what_if_demo
+```
+
+Inputs:
+
+```text
+examples/renewable_energy/l4/world_model.json
+examples/renewable_energy/l5/scenario_24h.json
+```
+
+Outputs:
+
+```text
+examples/renewable_energy/l6/optimization_result.json
+examples/renewable_energy/l6/what_if_result.json
+```
+
+L6 solves the 24h dispatch with CVXPY, then executes the optimal `Action`
+sequence through the L5 runtime to prove the closed loop.

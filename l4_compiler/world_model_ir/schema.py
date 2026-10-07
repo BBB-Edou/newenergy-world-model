@@ -48,6 +48,8 @@ class WorldModelMetadata(IRSchemaModel):
     source_model: str = "SysMLModel"
     source_views: list[str] = Field(default_factory=lambda: ["Requirements", "BDD", "IBD", "Activity", "State", "Parametric"])
     simulation: SimulationSettings = Field(default_factory=SimulationSettings)
+    required_inputs: list[str] = Field(default_factory=list)
+    input_units: dict[str, str | None] = Field(default_factory=dict)
 
 
 class Entity(IRSchemaModel):
@@ -141,8 +143,35 @@ class Interface(IRSchemaModel):
     trace: list[TraceSource] = Field(default_factory=list)
 
 
+class ScenarioInputSpec(IRSchemaModel):
+    name: str
+    entity: str | None = None
+    semantic_role: str = "unknown"
+    unit: str | None = None
+    data_type: VariableType = VariableType.ANY
+    required: bool = True
+    temporal: bool = True
+    aliases: list[str] = Field(default_factory=list)
+    source_ids: list[str] = Field(default_factory=list)
+
+
+class ScenarioTimeRequirements(IRSchemaModel):
+    step_size: float = 1.0
+    horizon: int = 1
+    time_unit: str = "abstract"
+    start_time: float | None = None
+    end_time: float | None = None
+    timestamp_field: str = "timestamp"
+
+
+class ScenarioInputContract(IRSchemaModel):
+    inputs: list[ScenarioInputSpec] = Field(default_factory=list)
+    time_requirements: ScenarioTimeRequirements = Field(default_factory=ScenarioTimeRequirements)
+
+
 class WorldModel(IRSchemaModel):
     metadata: WorldModelMetadata
+    scenario_input_contract: ScenarioInputContract | None = None
     entities: list[Entity] = Field(default_factory=list)
     attributes: list[Attribute] = Field(default_factory=list)
     states: list[State] = Field(default_factory=list)

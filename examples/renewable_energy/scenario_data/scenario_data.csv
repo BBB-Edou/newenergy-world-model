@@ -1,0 +1,5 @@
+timestamp,wind_power,pv_power,load_power,electricity_price
+00:00,120,0,300,0.35
+01:00,110,0,280,0.35
+02:00,100,0,270,0.35
+03:00,90,0,260,0.32

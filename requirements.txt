@@ -5,5 +5,8 @@ pymupdf>=1.24
 pydantic>=2.7
 openai>=1.30
 
+# L6 convex optimization (L5 world model fed to CVXPY)
+cvxpy>=1.5
+
 # Test runner
 pytest>=8.0

@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from l3_sysml import SysMLModel
+from l4_compiler.compiler.input_contract import build_scenario_input_contract
 from l4_compiler.compiler.ir_validator import assert_valid_world_model
 from l4_compiler.compiler.loader import load_sysml
 from l4_compiler.compiler.mappings import map_activity, map_bdd, map_ibd, map_parametric, map_requirements, map_state
@@ -98,6 +99,9 @@ class ModelCompiler:
             constraints=constraints,
             objectives=objectives,
             interfaces=interfaces,
+        )
+        world_model = world_model.model_copy(
+            update={"scenario_input_contract": build_scenario_input_contract(world_model)}
         )
         return assert_valid_world_model(world_model)
 

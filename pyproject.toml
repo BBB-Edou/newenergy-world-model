@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Minimal L1-L6 skeleton for an LLM-driven renewable-energy world model."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["pymupdf>=1.24", "pydantic>=2.7", "openai>=1.30"]
+dependencies = ["pymupdf>=1.24", "pydantic>=2.7", "openai>=1.30", "cvxpy>=1.5"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
@@ -21,6 +21,7 @@ include = [
   "l3_sysml*",
   "l4_compiler*",
   "l5_world_model*",
+  "scenario_binding*",
   "l6_optimization*",
   "pipelines*",
 ]

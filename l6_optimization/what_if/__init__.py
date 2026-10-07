@@ -1,1 +1,5 @@
-"""What-if scenario orchestration will live here."""
+"""What-if scenario analysis."""
+
+from .runner import WhatIfRunner
+
+__all__ = ["WhatIfRunner"]

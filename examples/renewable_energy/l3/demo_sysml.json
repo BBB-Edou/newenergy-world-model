@@ -95,6 +95,20 @@
             "value": 90,
             "unit": "%",
             "source_attribute_id": "battery_soc_max"
+          },
+          {
+            "id": "battery_charge_efficiency",
+            "name": "charge_efficiency",
+            "value": 0.95,
+            "unit": null,
+            "source_attribute_id": "battery_charge_efficiency"
+          },
+          {
+            "id": "battery_discharge_efficiency",
+            "name": "discharge_efficiency",
+            "value": 0.95,
+            "unit": null,
+            "source_attribute_id": "battery_discharge_efficiency"
           }
         ],
         "source_entity_id": "battery"
@@ -111,6 +125,13 @@
             "value": 150,
             "unit": "kW",
             "source_attribute_id": "grid_max_import_power"
+          },
+          {
+            "id": "grid_electricity_price",
+            "name": "electricity_price",
+            "value": 0.35,
+            "unit": "CNY/kWh",
+            "source_attribute_id": "grid_electricity_price"
           }
         ],
         "source_entity_id": "grid"
@@ -347,6 +368,30 @@
         "unit": "%",
         "source_attribute_id": null,
         "source_state_id": "battery_soc"
+      },
+      {
+        "id": "battery_charge_efficiency",
+        "name": "charge_efficiency",
+        "value": 0.95,
+        "unit": null,
+        "source_attribute_id": "battery_charge_efficiency",
+        "source_state_id": null
+      },
+      {
+        "id": "battery_discharge_efficiency",
+        "name": "discharge_efficiency",
+        "value": 0.95,
+        "unit": null,
+        "source_attribute_id": "battery_discharge_efficiency",
+        "source_state_id": null
+      },
+      {
+        "id": "grid_electricity_price",
+        "name": "electricity_price",
+        "value": 0.35,
+        "unit": "CNY/kWh",
+        "source_attribute_id": "grid_electricity_price",
+        "source_state_id": null
       }
     ],
     "equations": [

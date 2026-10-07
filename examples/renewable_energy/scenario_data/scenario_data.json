@@ -1,0 +1,50 @@
+{
+  "scenario_id": "renewable_energy_demo",
+  "time": [
+    "00:00",
+    "01:00",
+    "02:00",
+    "03:00"
+  ],
+  "variables": {
+    "electricity_price": [
+      0.35,
+      0.35,
+      0.35,
+      0.32
+    ],
+    "load_power": [
+      300,
+      280,
+      270,
+      260
+    ],
+    "pv_power": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "wind_power": [
+      120,
+      110,
+      100,
+      90
+    ]
+  },
+  "units": {
+    "electricity_price": "CNY/kWh",
+    "load_power": "kW",
+    "pv_power": "kW",
+    "wind_power": "kW"
+  },
+  "metadata": {
+    "table_id": "table_01",
+    "time_step": "1h"
+  },
+  "source": {
+    "document": "demo_scenario.md",
+    "table_id": "table_01",
+    "page": null
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "$defs": {
+    "DataManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "scenario_id": {
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "table_id": {
+          "title": "Table Id",
+          "type": "string"
+        },
+        "time_column": {
+          "title": "Time Column",
+          "type": "string"
+        },
+        "columns": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Columns",
+          "type": "object"
+        },
+        "units": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Units",
+          "type": "object"
+        },
+        "time_step": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Time Step"
+        },
+        "source": {
+          "$ref": "#/$defs/ScenarioSource"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "table_id",
+        "time_column",
+        "columns",
+        "source"
+      ],
+      "title": "DataManifest",
+      "type": "object"
+    },
+    "ScenarioData": {
+      "additionalProperties": false,
+      "properties": {
+        "scenario_id": {
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "time": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Time",
+          "type": "array"
+        },
+        "variables": {
+          "additionalProperties": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "array"
+          },
+          "title": "Variables",
+          "type": "object"
+        },
+        "units": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Units",
+          "type": "object"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "title": "Metadata",
+          "type": "object"
+        },
+        "source": {
+          "$ref": "#/$defs/ScenarioSource"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "time",
+        "variables",
+        "source"
+      ],
+      "title": "ScenarioData",
+      "type": "object"
+    },
+    "ScenarioSource": {
+      "additionalProperties": false,
+      "properties": {
+        "document": {
+          "title": "Document",
+          "type": "string"
+        },
+        "table_id": {
+          "title": "Table Id",
+          "type": "string"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        }
+      },
+      "required": [
+        "document",
+        "table_id"
+      ],
+      "title": "ScenarioSource",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "updated": {
+      "title": "Updated",
+      "type": "boolean"
+    },
+    "scenario_data": {
+      "$ref": "#/$defs/ScenarioData"
+    },
+    "data_manifest": {
+      "$ref": "#/$defs/DataManifest"
+    },
+    "changed_fields": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Changed Fields",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "updated",
+    "scenario_data",
+    "data_manifest"
+  ],
+  "title": "ScenarioUpdateResult",
+  "type": "object"
+}
