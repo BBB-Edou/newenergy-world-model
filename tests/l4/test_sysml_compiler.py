@@ -7,7 +7,7 @@ from l4_compiler import DefaultSysMLCompiler
 
 
 class SysMLCompilerTests(unittest.TestCase):
-    def test_parameters_and_blocks_map_to_independent_ir(self) -> None:
+    def test_blocks_and_attributes_map_to_world_model(self) -> None:
         model = SysMLModel(
             bdd=BDD(
                 blocks=[
@@ -25,12 +25,12 @@ class SysMLCompilerTests(unittest.TestCase):
             ),
         )
 
-        ir = DefaultSysMLCompiler().compile(model)
+        world_model = DefaultSysMLCompiler().compile(model)
 
-        self.assertEqual(len(ir.entities), 1)
-        self.assertEqual(len(ir.parameters), 1)
-        self.assertEqual(ir.entities[0].parameter_ids, (ir.parameters[0].parameter_id,))
-        self.assertEqual(ir.metadata["status"], "placeholder")
+        self.assertEqual(len(world_model.entities), 1)
+        self.assertEqual(len(world_model.attributes), 1)
+        self.assertEqual(world_model.attributes[0].owner, "entity-entity-1")
+        self.assertEqual(world_model.metadata.source_model, "SysMLModel")
 
 
 if __name__ == "__main__":

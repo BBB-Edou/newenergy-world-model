@@ -44,3 +44,16 @@ examples/renewable_energy/l3/demo_sysml.puml
 ```
 
 The demo is deterministic and uses no API.
+## L4 SysML -> World Model IR demo
+
+```powershell
+python -m l4_compiler.demo
+```
+
+Outputs:
+
+```text
+examples/renewable_energy/l4/world_model.json
+```
+
+The compiler is deterministic and uses no LLM.

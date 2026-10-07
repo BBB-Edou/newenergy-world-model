@@ -2,21 +2,18 @@
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Protocol
 
 from l3_sysml import SysMLModel
-from l4_compiler.world_model_ir import SimulationStepSpec, WorldModelIR
+from l4_compiler.world_model_ir import SimulationSettings, WorldModel
 
 
 class WorldModelCompiler(Protocol):
     def compile(
         self,
-        sysml_model: SysMLModel,
+        sysml_model: SysMLModel | dict | str | Path,
         *,
-        simulation: SimulationStepSpec | None = None,
-    ) -> WorldModelIR:
-        """Compile a SysML model into an independent World Model IR."""
+        simulation: SimulationSettings | None = None,
+    ) -> WorldModel:
         ...
-
-
-SysMLToWorldModelCompiler = WorldModelCompiler

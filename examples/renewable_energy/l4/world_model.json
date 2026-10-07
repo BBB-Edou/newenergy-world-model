@@ -1,0 +1,725 @@
+{
+  "attributes": [
+    {
+      "id": "attribute-battery_capacity",
+      "name": "capacity",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_capacity",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_capacity",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kWh",
+      "value": 200,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-battery_max_charge_power",
+      "name": "max_charge_power",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_max_charge_power",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_max_charge_power",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kW",
+      "value": 50,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-battery_max_discharge_power",
+      "name": "max_discharge_power",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_max_discharge_power",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_max_discharge_power",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kW",
+      "value": 50,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-battery_soc_max",
+      "name": "SOC_max",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_soc_max",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_soc_max",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "%",
+      "value": 90,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-battery_soc_min",
+      "name": "SOC_min",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_soc_min",
+          "source_parent_id": "block-battery",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery_soc_min",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "%",
+      "value": 20,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-grid_max_import_power",
+      "name": "max_import_power",
+      "owner": "entity-grid",
+      "trace": [
+        {
+          "source_id": "grid_max_import_power",
+          "source_parent_id": "block-grid",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "grid_max_import_power",
+          "source_parent_id": "grid",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kW",
+      "value": 150,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-load_demand",
+      "name": "demand",
+      "owner": "entity-load",
+      "trace": [
+        {
+          "source_id": "load_demand",
+          "source_parent_id": "block-load",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "load_demand",
+          "source_parent_id": "load",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kW",
+      "value": 120,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-pv_rated_power",
+      "name": "rated_power",
+      "owner": "entity-pv",
+      "trace": [
+        {
+          "source_id": "pv_rated_power",
+          "source_parent_id": "block-pv",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "pv_rated_power",
+          "source_parent_id": "pv",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kW",
+      "value": 80,
+      "value_type": "integer"
+    },
+    {
+      "id": "attribute-wind_rated_power",
+      "name": "rated_power",
+      "owner": "entity-wind",
+      "trace": [
+        {
+          "source_id": "wind_rated_power",
+          "source_parent_id": "block-wind",
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "wind_rated_power",
+          "source_parent_id": "wind",
+          "source_type": "knowledge_state",
+          "source_view": "Attribute"
+        }
+      ],
+      "unit": "kW",
+      "value": 100,
+      "value_type": "integer"
+    }
+  ],
+  "behaviors": [
+    {
+      "description": null,
+      "id": "behavior-charging",
+      "inputs": [
+        "entity-grid"
+      ],
+      "name": "charging",
+      "outputs": [
+        "entity-battery"
+      ],
+      "owner": "entity-grid",
+      "trace": [
+        {
+          "source_id": "action-charging",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Activity"
+        },
+        {
+          "source_id": "charging",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Process"
+        }
+      ]
+    },
+    {
+      "description": null,
+      "id": "behavior-discharging",
+      "inputs": [
+        "entity-battery"
+      ],
+      "name": "discharging",
+      "outputs": [
+        "entity-load"
+      ],
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "action-discharging",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Activity"
+        },
+        {
+          "source_id": "discharging",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Process"
+        }
+      ]
+    },
+    {
+      "description": null,
+      "id": "behavior-generation",
+      "inputs": [
+        "entity-pv",
+        "entity-wind"
+      ],
+      "name": "generation",
+      "outputs": [
+        "entity-load"
+      ],
+      "owner": "entity-wind",
+      "trace": [
+        {
+          "source_id": "action-generation",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Activity"
+        },
+        {
+          "source_id": "generation",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Process"
+        }
+      ]
+    },
+    {
+      "description": null,
+      "id": "behavior-grid_purchase",
+      "inputs": [
+        "entity-grid"
+      ],
+      "name": "grid_purchase",
+      "outputs": [
+        "entity-load"
+      ],
+      "owner": "entity-grid",
+      "trace": [
+        {
+          "source_id": "action-grid_purchase",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Activity"
+        },
+        {
+          "source_id": "grid_purchase",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Process"
+        }
+      ]
+    },
+    {
+      "description": null,
+      "id": "behavior-load_consumption",
+      "inputs": [
+        "entity-load"
+      ],
+      "name": "load_consumption",
+      "outputs": [],
+      "owner": "entity-load",
+      "trace": [
+        {
+          "source_id": "action-load_consumption",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Activity"
+        },
+        {
+          "source_id": "load_consumption",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Process"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "SOC_min <= SOC <= SOC_max",
+      "id": "constraint-soc_limits",
+      "name": "SOC limits",
+      "scope": [],
+      "trace": [
+        {
+          "source_id": "requirement-soc_limits",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Requirements"
+        },
+        {
+          "source_id": "soc_limits",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Constraint"
+        }
+      ],
+      "variables": []
+    }
+  ],
+  "entities": [
+    {
+      "attribute_ids": [
+        "attribute-battery_capacity",
+        "attribute-battery_max_charge_power",
+        "attribute-battery_max_discharge_power",
+        "attribute-battery_soc_max",
+        "attribute-battery_soc_min"
+      ],
+      "behavior_ids": [
+        "behavior-discharging"
+      ],
+      "description": null,
+      "entity_type": "storage",
+      "id": "entity-battery",
+      "interface_ids": [
+        "interface-battery_to_load"
+      ],
+      "name": "Battery",
+      "state_ids": [
+        "state-battery_soc"
+      ],
+      "trace": [
+        {
+          "source_id": "block-battery",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "battery",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Entity"
+        }
+      ]
+    },
+    {
+      "attribute_ids": [
+        "attribute-grid_max_import_power"
+      ],
+      "behavior_ids": [
+        "behavior-charging",
+        "behavior-grid_purchase"
+      ],
+      "description": null,
+      "entity_type": "grid_connection",
+      "id": "entity-grid",
+      "interface_ids": [
+        "interface-grid_to_load"
+      ],
+      "name": "Grid",
+      "state_ids": [],
+      "trace": [
+        {
+          "source_id": "block-grid",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "grid",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Entity"
+        }
+      ]
+    },
+    {
+      "attribute_ids": [
+        "attribute-load_demand"
+      ],
+      "behavior_ids": [
+        "behavior-load_consumption"
+      ],
+      "description": null,
+      "entity_type": "demand",
+      "id": "entity-load",
+      "interface_ids": [
+        "interface-battery_to_load",
+        "interface-grid_to_load",
+        "interface-pv_to_load",
+        "interface-wind_to_load"
+      ],
+      "name": "Load",
+      "state_ids": [],
+      "trace": [
+        {
+          "source_id": "block-load",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "load",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Entity"
+        }
+      ]
+    },
+    {
+      "attribute_ids": [
+        "attribute-pv_rated_power"
+      ],
+      "behavior_ids": [],
+      "description": null,
+      "entity_type": "renewable_source",
+      "id": "entity-pv",
+      "interface_ids": [
+        "interface-pv_to_load"
+      ],
+      "name": "PV",
+      "state_ids": [],
+      "trace": [
+        {
+          "source_id": "block-pv",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "pv",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Entity"
+        }
+      ]
+    },
+    {
+      "attribute_ids": [
+        "attribute-wind_rated_power"
+      ],
+      "behavior_ids": [
+        "behavior-generation"
+      ],
+      "description": null,
+      "entity_type": "renewable_source",
+      "id": "entity-wind",
+      "interface_ids": [
+        "interface-wind_to_load"
+      ],
+      "name": "Wind",
+      "state_ids": [],
+      "trace": [
+        {
+          "source_id": "block-wind",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "BDD"
+        },
+        {
+          "source_id": "wind",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Entity"
+        }
+      ]
+    }
+  ],
+  "equations": [
+    {
+      "expression": "minimize operating_cost",
+      "id": "equation-minimize_operating_cost",
+      "name": "operating_cost",
+      "trace": [
+        {
+          "source_id": "equation-minimize_operating_cost",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Parametric"
+        },
+        {
+          "source_id": "minimize_operating_cost",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Objective"
+        }
+      ],
+      "units": {},
+      "variables": []
+    },
+    {
+      "expression": "SOC_min <= SOC <= SOC_max",
+      "id": "equation-soc_limits",
+      "name": "SOC limits",
+      "trace": [
+        {
+          "source_id": "equation-soc_limits",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Parametric"
+        },
+        {
+          "source_id": "soc_limits",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Constraint"
+        }
+      ],
+      "units": {
+        "attribute-battery_soc_max": "%",
+        "attribute-battery_soc_min": "%",
+        "state-battery_soc": "%"
+      },
+      "variables": [
+        "attribute-battery_soc_max",
+        "attribute-battery_soc_min",
+        "state-battery_soc"
+      ]
+    }
+  ],
+  "events": [],
+  "interfaces": [
+    {
+      "id": "interface-battery_to_load",
+      "interface_type": "supplies",
+      "name": "supplies",
+      "source": "entity-battery",
+      "target": "entity-load",
+      "trace": [
+        {
+          "source_id": "connector-battery_to_load",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "IBD"
+        },
+        {
+          "source_id": "battery_to_load",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Relation"
+        }
+      ],
+      "variable_ids": []
+    },
+    {
+      "id": "interface-grid_to_load",
+      "interface_type": "supplies",
+      "name": "supplies",
+      "source": "entity-grid",
+      "target": "entity-load",
+      "trace": [
+        {
+          "source_id": "connector-grid_to_load",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "IBD"
+        },
+        {
+          "source_id": "grid_to_load",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Relation"
+        }
+      ],
+      "variable_ids": []
+    },
+    {
+      "id": "interface-pv_to_load",
+      "interface_type": "supplies",
+      "name": "supplies",
+      "source": "entity-pv",
+      "target": "entity-load",
+      "trace": [
+        {
+          "source_id": "connector-pv_to_load",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "IBD"
+        },
+        {
+          "source_id": "pv_to_load",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Relation"
+        }
+      ],
+      "variable_ids": []
+    },
+    {
+      "id": "interface-wind_to_load",
+      "interface_type": "supplies",
+      "name": "supplies",
+      "source": "entity-wind",
+      "target": "entity-load",
+      "trace": [
+        {
+          "source_id": "connector-wind_to_load",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "IBD"
+        },
+        {
+          "source_id": "wind_to_load",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Relation"
+        }
+      ],
+      "variable_ids": []
+    }
+  ],
+  "metadata": {
+    "ir_id": "world-model-ir",
+    "name": "World Model IR",
+    "simulation": {
+      "horizon": 1,
+      "step_size": 1.0,
+      "time_unit": "abstract"
+    },
+    "source_model": "SysMLModel",
+    "source_views": [
+      "Requirements",
+      "BDD",
+      "IBD",
+      "Activity",
+      "State",
+      "Parametric"
+    ],
+    "version": "1.0"
+  },
+  "objectives": [
+    {
+      "expression": "minimize operating_cost",
+      "id": "objective-minimize_operating_cost",
+      "name": "operating_cost",
+      "scope": [],
+      "sense": "minimize",
+      "trace": [
+        {
+          "source_id": "requirement-minimize_operating_cost",
+          "source_parent_id": null,
+          "source_type": "sysml",
+          "source_view": "Requirements"
+        },
+        {
+          "source_id": "minimize_operating_cost",
+          "source_parent_id": null,
+          "source_type": "knowledge_state",
+          "source_view": "Objective"
+        }
+      ]
+    }
+  ],
+  "states": [
+    {
+      "description": null,
+      "id": "state-battery_soc",
+      "name": "SOC",
+      "owner": "entity-battery",
+      "trace": [
+        {
+          "source_id": "battery_soc",
+          "source_parent_id": "state-machine-battery",
+          "source_type": "sysml",
+          "source_view": "State"
+        },
+        {
+          "source_id": "battery_soc",
+          "source_parent_id": "battery",
+          "source_type": "knowledge_state",
+          "source_view": "StateVariable"
+        }
+      ],
+      "unit": "%",
+      "value": 50
+    }
+  ]
+}

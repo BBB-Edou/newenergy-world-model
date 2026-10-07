@@ -67,3 +67,10 @@ python -m l3_sysml.live_test --live
 ```
 
 The live test reuses the existing L2 DeepSeek client configuration.
+## Run L4 compiler demo
+
+```powershell
+python -m l4_compiler.demo
+```
+
+This compiles `examples/renewable_energy/l3/demo_sysml.json` into `examples/renewable_energy/l4/world_model.json`.

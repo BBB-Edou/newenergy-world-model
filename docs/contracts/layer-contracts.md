@@ -80,3 +80,23 @@ parametric
 ```
 
 No additional top-level SysML branches are introduced. `PlantUMLGenerator.generate(sysml_model) -> str` renders all six sections for human inspection.
+## L4 World Model IR Contract
+
+`compile_sysml_to_world_model(sysml_model) -> WorldModel` consumes only the validated six-part L3 `SysMLModel` and performs deterministic mapping without LLM calls.
+
+`WorldModel` contains exactly:
+
+```text
+metadata
+entities
+attributes
+states
+behaviors
+events
+equations
+constraints
+objectives
+interfaces
+```
+
+Every mapped object carries `trace` links back to SysML source ids and, where available, KnowledgeState ids. `validate_world_model()` checks structural and reference integrity before the IR is exposed to L5.

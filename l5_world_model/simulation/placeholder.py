@@ -4,21 +4,19 @@ from __future__ import annotations
 
 from dataclasses import replace
 
-from l4_compiler.world_model_ir import WorldModelIR
+from l4_compiler.world_model_ir import WorldModel
 from l5_world_model.models import Action, MetricValue, SimulationConfig, SimulationResult, SimulationTrace, WorldState
 from l5_world_model.simulation.base import ExecutableWorldModel
 
 
 class PlaceholderWorldModel(ExecutableWorldModel):
-    """A deterministic no-physics model."""
-
-    def __init__(self, ir: WorldModelIR, *, config: SimulationConfig | None = None) -> None:
+    def __init__(self, ir: WorldModel, *, config: SimulationConfig | None = None) -> None:
         super().__init__(ir, config=config)
         self._pending_actions: list[Action] = []
         self._trace: list[SimulationTrace] = []
 
     def initialize(self) -> WorldState:
-        values = {variable.state_variable_id: variable.initial_value for variable in self.ir.state_variables}
+        values = {state.id: state.value for state in self.ir.states}
         self._state = WorldState(time=0.0, values=values)
         self._pending_actions.clear()
         self._trace = [SimulationTrace(step_index=0, state=self._state)]
